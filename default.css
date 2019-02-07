@@ -1,4 +1,5 @@
 
+
 html, body
 {
 	height: 100%;
@@ -300,9 +301,7 @@ hr
 {
 	overflow: hidden;
 	height: 1000px;
-	background: url('
-        jakubstenc/images/ked.jpg
-      ') no-repeat top center;
+	background: url('images/ked.jpg') no-repeat top center;
 	background-size: 100%;
 }
 
@@ -622,12 +621,6 @@ hr
 	{
 		float: right;
 	}
-
-
-
-
-
-
 
 
 
