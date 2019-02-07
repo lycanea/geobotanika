@@ -3,10 +3,12 @@
 Design by TEMPLATED
 http://templated.co
 Released for free under the Creative Commons Attribution License
+
 Name       : Livewire 
 Description: A two-column, fixed-width design with dark color scheme.
 Version    : 1.0
 Released   : 20130820
+
 -->
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -26,6 +28,8 @@ Released   : 20130820
 </head>
 <body>
 <div id="header-wrapper">
+
+
 	<div id="header-wrapper2">
 		<div id="header" class="container">
 			<div id="logo">
@@ -74,9 +78,35 @@ Released   : 20130820
 	<div id="page" class="container">
 		<div id="content">
 			<div class="title">
-				<h2>Welcome to our website</h2>
+				<h2>Úvod</h2>
+</div>
+<div id="main">
+
+   <p>Vítejte na stránkách <b>Oddělení geobotaniky</b> <a href="https://www.natur.cuni.cz/biologie/botanika">Katedry botaniky</a> Přírodovědecké fakulty Univerzity Karlovy v Praze.<p>Geobotanikou se tradičně označuje studium ekologie rostlin v geografick&eacute;m                 a historick&eacute;m kontextu. Jej&iacute;m z&aacute;kladem jsou znalosti ve dvou z&aacute;kladn&iacute;ch                 oblastech, a to (i) <b>populačn&iacute; biologie a ekologie rostlin</b> a (ii)                 <b>geografie a historie vegetace</b>.    
+   <p><strong>Do prvn&iacute;ho okruhu patř&iacute; např&iacute;klad:</strong></p>
+   <ul>
+      <li> ekologie rostlinn&yacute;ch populac&iacute;, populačn&iacute; dynamika a ekologick&aacute;                   genetika, ekologie invazn&iacute;ch druhů, ekologie d&aacute;lkov&eacute;ho &scaron;&iacute;řen&iacute; </li>
+      <li> interakce mezi druhy a individui, ekologie rostlinn&yacute;ch společenstev,                   dynamika populac&iacute; a společenstev, interakce mezi rostlinami a                   živočichy (včetně pastvy), nebo rostlinami a jejich parazity</li>
+      <li> vztah rostlin ke kl&iacute;čov&yacute;m faktorům jejich abiotick&eacute;ho prostřed&iacute;,                   adaptace na extr&eacute;mn&iacute; prostřed&iacute; </li>
+   </ul>
+   <p><strong>Do druh&eacute;ho okruhu patř&iacute; např&iacute;klad:</strong></p>
+   <ul>
+      <li> klasifikace rostlinn&yacute;ch společenstev, vztah rostlinn&yacute;ch společenstev                   k ekologick&yacute;m faktorům (často zkouman&eacute; mnohorozměrnou anal&yacute;zou)</li>
+      <li> vegetačn&iacute; fenom&eacute;ny vzhledem ke geomorfologii, geologii a mikroklimatu </li>
+      <li> struktura vegetace a krajiny na vět&scaron;&iacute; prostorov&eacute; &scaron;k&aacute;le, heterogenita                   krajiny, změny roz&scaron;&iacute;řen&iacute; vybran&yacute;ch druhů vzhledem k faktorům prostřed&iacute; </li>
+      <li> rostlinn&aacute; diverzita a ekologick&eacute; faktory, hierarchie biodiverzity                   v r&aacute;mci krajiny </li>
+      <li> historie vegetace a jej&iacute; vztah k dne&scaron;n&iacute;mu světu</li>
+   </ul>
+   <p>Na pražsk&eacute;m oddělen&iacute; geobotaniky se c&iacute;leně snaž&iacute;me pěstovat oba                 směry a umožnit tak propojen&iacute; mezi studiem historie a prostorov&eacute;ho                 roz&scaron;&iacute;řen&iacute; vegetace (včetně paleoekologie) se znalostmi ekologie                 a populačn&iacute; biologie rostlin. Populačn&iacute; biologie či ekofysiologie                 rostlin ned&aacute;vaj&iacute; mnoho smyslu, pokud nevezmeme v &uacute;vahu, kde a s                 k&yacute;m se ony rostliny aktu&aacute;lně vyskytuj&iacute;, př&iacute;padně jak a kdy se tam                 dostaly; podobně popis struktury, roz&scaron;&iacute;řen&iacute; nebo historie vegetace                 ned&aacute;v&aacute; mnoho smyslu, pokud nerozum&iacute;m životu rostlin, kter&eacute; onu vegetaci                 skl&aacute;daj&iacute;. </p>
+   <p>Geobotanika m&aacute; podstatn&eacute; aplikace, a to nejen (i když hodně) v                 ochraně př&iacute;rody (užit&iacute; vegetačn&iacute;ch map a jin&yacute;ch vegetačn&iacute;ch dat                 v ochraně př&iacute;rody, krajinn&eacute;m pl&aacute;nov&aacute;n&iacute; atp., ekologie obnovy, bioindikace,                 Natura 2000). V &scaron;ir&scaron;&iacute;m kontextu je z&aacute;kladem pro ch&aacute;p&aacute;n&iacute; struktury                 a v&yacute;voje krajiny.</p>
+   <p>&nbsp;</p>
+   <p>&nbsp;</p>
+</div>
+<div class="title">
+				<h2>Lidé</h2>
+</div>
+
 				<span class="byline">Phasellus nec erat sit amet nibh pellentesque congue</span> </div>
-			<p>This is <strong>Livewire</strong>, a free, fully standards-compliant CSS template designed by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. The photos in this template are from <a href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so you're pretty much free to do whatever you want with it (even use it commercially) provided you give us credit for it. Have fun :) </p>
 			<a href="#" class="button">Read More</a> </div>
 		<div id="sidebar">
 			<div class="box1">
@@ -101,4 +131,3 @@ Released   : 20130820
 </div>
 </body>
 </html>
-
