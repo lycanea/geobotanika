@@ -49,7 +49,7 @@ Released   : 20130820
 			<div id="menu1">
 				<ul>
 					<li class="current_page_item"><a href="#" accesskey="1" title="">Úvod</a></li>
-					<li><a href="#" accesskey="2" title="">Lidé</a></li>
+					<li><a href="#lide" accesskey="2" title="">Lidé</a></li>
 					<li><a href="#" accesskey="3" title="">Témata</a></li>
 					<li><a href="#" accesskey="4" title="">Život na oddělení</a></li>
 					<li><a href="#" accesskey="5" title="">Odkazy</a></li>
@@ -104,6 +104,7 @@ Released   : 20130820
 </div>
 <div class="title">
 				<h2>Lidé</h2>
+				<a name=lide></a> 
 </div>
 
 				<span class="byline">Phasellus nec erat sit amet nibh pellentesque congue</span> </div>
@@ -131,4 +132,3 @@ Released   : 20130820
 </div>
 </body>
 </html>
-
