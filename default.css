@@ -300,9 +300,9 @@ hr
 {
 	overflow: hidden;
 	height: 1000px;
-	background: url('
+	background: url(
         jakubstenc/images/ked.jpg
-      ') no-repeat top center;
+      ) no-repeat top center;
 	background-size: 100%;
 }
 
