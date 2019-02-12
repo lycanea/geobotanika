@@ -17,7 +17,7 @@ Released   : 20130820
 <title> Geobotanika</title>
 <meta name="keywords" content="" />
 <meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
 <link href="default.css" rel="stylesheet" type="text/css" media="all" />
@@ -38,15 +38,16 @@ Released   : 20130820
 				<h1><a href="#"></a></h1>
 			</div>
 <style>
-    .menu {list-style: none; padding: 5; margin: 0; text-align: center}
+    .menu {list-style: none; padding: 5; margin: 0; text-align: center; position:fixed; display: inline-block; width: 200px; line-height: 20px; left: 0; top: 0; width: 100%;position: fixed}
     .menu li {display: inline}
-    .menu a {text-decoration: none; border-bottom: 0; background: #000000; padding: 1px; display: inline-block; width: 100px; line-height: 20px}
+    .menu a {text-decoration: none; border-bottom: 0; background: #000000;text-align: center; padding: 1px; display: inline-block; width: 200px; line-height: 20px}
     .menu1 {position: fixed; left: 0; top: 0; width: 100%; background: #000000; text-align: center; z-index: 1}    
+    
   </style>
 
 
 			<div id="menu">
-			
+
 
 			<div id="menu1">
 				<ul>
@@ -58,8 +59,8 @@ Released   : 20130820
 					<a hre<a href='https://www.facebook.com/Hypoteticky.jednorozec'><img src='images/fa.png'   /></a>   			
 
 				</ul>
-											</div>
-				
+
+																		</div>
 </div>
 			<script>
     var menu = document.getElementById('menu1');
@@ -67,9 +68,12 @@ Released   : 20130820
       menu.className = (
         document.documentElement.scrollTop + document.body.scrollTop > menu.parentNode.offsetTop
         && document.documentElement.clientHeight > menu.offsetHeight
-      ) ? "menu1" : "";
+      ) ? "menu1" : ""
     }
   </script>
+
+ 
+
 
 		</div>
 		<div class="major">
@@ -79,15 +83,19 @@ Released   : 20130820
 			 </div>
 	
 	</div>
-</div>				   				<a name=uvod></a> 
-<div id="wrapper">
-	<div id="page" class="container">
-		<div id="content">
-			<div class="title">
-				<h2>Úvod</h2>
+	</div>
+
 				   				<a name=uvod></a> 
+<div id="wrapper">
+	
+
+
+             <div class="title">
+				<h2>Úvod</h2>
+             </div>
+		             <div class="main">
+
 </div>
-<div id="main">
 
    <p>Vítejte na stránkách <b>Oddělení geobotaniky</b> <a href="https://www.natur.cuni.cz/biologie/botanika">Katedry botaniky</a> Přírodovědecké fakulty Univerzity Karlovy v Praze.<p>Geobotanikou se tradičně označuje studium ekologie rostlin v geografick&eacute;m                 a historick&eacute;m kontextu. Jej&iacute;m z&aacute;kladem jsou znalosti ve dvou z&aacute;kladn&iacute;ch                 oblastech, a to (i) <b>populačn&iacute; biologie a ekologie rostlin</b> a (ii)                 <b>geografie a historie vegetace</b>.    
    <p><strong>Do prvn&iacute;ho okruhu patř&iacute; např&iacute;klad:</strong></p>
@@ -110,7 +118,7 @@ Released   : 20130820
    <p>&nbsp;</p>				
    
 
-</div>
+
 <div>
    				<a name=lide></a> 
    				<ul>
@@ -823,7 +831,8 @@ Vámi také sepíše zadávací protokol.</li>
 		</div>
 		</div>
 		</div>
-<div id="copyright" class="container">
+		</div>
+<div id="copyright" class="">
 	<p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
 </div>
 </body>
