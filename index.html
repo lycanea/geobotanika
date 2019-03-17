@@ -1,101 +1,162 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!DOCTYPE HTML>
 <!--
-Design by TEMPLATED
-http://templated.co
-Released for free under the Creative Commons Attribution License
-
-Name       : Livewire 
-Description: A two-column, fixed-width design with dark color scheme.
-Version    : 1.0
-Released   : 20130820
-
+Geobotanika
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
 -->
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title> Geobotanika</title>
-<meta name="keywords" content="" />
-<meta name="description" content="" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
-<link href="default.css" rel="stylesheet" type="text/css" media="all" />
-<link href="fonts.css" rel="stylesheet" type="text/css" media="all" />
-<!--[if IE 6]>
-<link href="default_ie6.css" rel="stylesheet" type="text/css" />
-<![endif]-->
-
-
-</head>
-<body>
-<div id="header-wrapper">
-
-
-	<div id="header-wrapper2">
-		<div id="header" class="container">
-			<div id="logo">
-				<h1><a href="#"></a></h1>
-			</div>
+<html>
+	<head>
+		<title>Geobotanika</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
 <style>
-    .menu {list-style: none; padding: 5; margin: 0; text-align: center; position:fixed; display: inline-block; width: 200px; line-height: 20px; left: 0; top: 0; width: 100%;position: fixed}
-    .menu li {display: inline}
-    .menu a {text-decoration: none; border-bottom: 0; background: #000000;text-align: center; padding: 1px; display: inline-block; width: 200px; line-height: 20px}
-    .menu1 {position: fixed; left: 0; top: 0; width: 100%; background: #000000; text-align: center; z-index: 1}    
-    
-  </style>
+#more {display: none;}
+</style>
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.dropotron.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<script>function text(element, event){
+    if (!event)
+        event = window.event;
 
-
-			<div id="menu">
-
-
-			<div id="menu1">
-				<ul>
-					<li class=""><a href="#uvod" accesskey="1" title="">Úvod</a></li>
-					<li><a href="#lide" accesskey="2" title="">Lidé</a></li>
-					<li><a href="#temata" accesskey="3" title="">Témata</a></li>
-					<li><a href="#zivot" accesskey="4" title="">Život na oddělení</a></li>
-					<li><a href="#odkazy" accesskey="5" title="">Odkazy</a></li>
-					<a hre<a href='https://www.facebook.com/Hypoteticky.jednorozec'><img src='images/fa.png'   /></a>   			
-
-				</ul>
-
-																		</div>
-</div>
-			<script>
-    var menu = document.getElementById('menu1');
-    window.onscroll = function () {
-      menu.className = (
-        document.documentElement.scrollTop + document.body.scrollTop > menu.parentNode.offsetTop
-        && document.documentElement.clientHeight > menu.offsetHeight
-      ) ? "menu1" : ""
+    if (event.stopPropagation) {
+        event.stopPropagation();
+    } else {
+        event.cancelBubble = true;
     }
-  </script>
+    
+    
+    if (isVisible(element.children[1])) {
+        hideTree(element.children[1]);
+    } else {
+        showElement(element.children[1]);
+        
+        var children = element.parentNode.children
+        
+        for (var i = 0; i < children.length; i++) {
+            if(children[i] != element && isVisible(children[i].children[1])) {
+                hideTree(children[i].children[1])
+            }
+        }
+    }
+}
 
- 
+function hideTree(element) {
+    hideElement(element)
+    
+    var children = element.children
+    for (var i = 0; i < children.length; i++) {
+        if(isVisible(children[i].children[1])) {
+            hideTree(children[i].children[1])
+        }
+    }
+}
+
+function showElement(element) {
+    element.className = element.className.replace(/(?:^|\s)hidden(?!\S)/g, '')
+}
+
+function hideElement(element) {
+    element.className += ' hidden'
+}
+
+function isVisible(element) {
+    return element.className.match(/(?:^|\s)hidden(?!\S)/) === null
+}</script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body class="homepage">
+
+		<!-- Header Wrapper -->
+			<div class="wrapper style1">
+			
+			<!-- Header -->
+				<div id="header">
+					<div class="container">
+							
+						<!-- Logo -->
+							<h1><a href="#" id="logo">Geobotanika</a></h1>
+						
+						<!-- Nav -->
+							<nav id="nav">
+								<ul>
+									<li class="active"><a href="#uvod">Úvod</a></li>
+
+									<li class="active"><a href="#zajemce">Pro zájemce o studium</a></li>									
+									<li>
+										<a href="#temata">Témata</a>
+										<ul>
+											<li><a href="#populacka">Populační ekologie rostlin</a></li>
+											<li><a href="#interakce">Interakce rostlin s herbivory</a></li>
+											<li><a href="#klonalita">Klonální rostliny</a></li>
+											<li><a href="#chovani">"Chování" rostlin a experimentální ekologie</a></li>
+										   <li><a href="#opylovani">Ekologie opylovačů a opylovaní rostlin</a></li>
+											<li><a href="#semena">Ekologie semen (jak se rostliny starají o potomstvo)</a></li>
+											<li><a href="#koreny">Ekologie podzemních orgánů rostlin</a></li>
+											<li><a href="#psf">Zpětná vazba mezi rostlinou a půdou</a></li>
+											<li><a href="#tropy">Eko(fyzio)logie horských rostlin v tropech i temperátu</a></li>
+											<li><a href="#adaptace">Adaptace rostlin ke změnám klimatu</a></li>
+											<li><a href="#evoluce_forem">Evoluce růstových forem a diversifikace</a></li>
+											<li><a href="#ochrana">Ochranářská biologie</a></li>
+											<li><a href="#historie">Historie a dynamika vegetace a krajiny</a></li>
+											<li><a href="#clovek">Rostliny a člověk ve víru staletí</a></li>
+											<li><a href="#ekosystemy">Fungování ekosystémů s globální změnou</a></li>
+											<li><a href="#struktura">Struktura a historie krajiny na škále od lokality po kontinent</a></li>
+										</ul>
+									</li>
+									<li><a href="#lide">Lidé</a></li>
+											<li><a href="#zivot">Život na oddělení</a></li>
+						         <li class="active"><a href="aktuality.html#aktuality">Aktuality</a></li>									
+									<li><a href="#odkazy">Odkazy</a></li>
 
 
-		</div>
-		<div class="major">
-			<h2>Geobotanika</h2>
-					<span>Katedra botaniky, Přírodovědecká fakulta, Univerzita Karlova v Praze
-</span>
-			 </div>
 	
-	</div>
-	</div>
-
-				   				<a name=uvod></a> 
-<div id="wrapper">
+								</ul>
+							</nav>
 	
+							<li>	<a href="https://www.facebook.com/Hypoteticky.jednorozec" class="icon"><img src="images/fa.png" align= "right" alt=""></a>
+	</li>
+</div>
 
+				</div>
 
-             <div class="title">
-				<h2>Úvod</h2>
-             </div>
-		             <div class="main">
+			<!-- Banner -->
+				<div id="banner">
+					<section class="container">
+						<h2>Geobotanika</h2>
+						<span></span>
+						<p>Oddělení katedry botaniky Přírodovědecké fakulty Univerzity Karlovy</p>
+					</section>
+				</div>
+
+			</div>
+								<!-- The sidebar -->
+<div class="sidebar">
+  <a class="active" href="aktuality.html"><b>Aktuality</b></a>
+  <a href="aktuality.html">Nové webové stránky a facebook</a>
+
 
 </div>
+																						   				<a name=uvod></a> 
+		<!-- Section One -->
+			<div class="wrapper style4">
+				<section class="container">
+					<div class="row double">
+						<div class="6u">
+							<header class="major">
+
+								<h2>Úvod</h2>
+								</header>
 
    <p>Vítejte na stránkách <b>Oddělení geobotaniky</b> <a href="https://www.natur.cuni.cz/biologie/botanika">Katedry botaniky</a> Přírodovědecké fakulty Univerzity Karlovy v Praze.<p>Geobotanikou se tradičně označuje studium ekologie rostlin v geografick&eacute;m                 a historick&eacute;m kontextu. Jej&iacute;m z&aacute;kladem jsou znalosti ve dvou z&aacute;kladn&iacute;ch                 oblastech, a to (i) <b>populačn&iacute; biologie a ekologie rostlin</b> a (ii)                 <b>geografie a historie vegetace</b>.    
    <p><strong>Do prvn&iacute;ho okruhu patř&iacute; např&iacute;klad:</strong></p>
@@ -115,573 +176,24 @@ Released   : 20130820
    <p>Na pražsk&eacute;m oddělen&iacute; geobotaniky se c&iacute;leně snaž&iacute;me pěstovat oba                 směry a umožnit tak propojen&iacute; mezi studiem historie a prostorov&eacute;ho                 roz&scaron;&iacute;řen&iacute; vegetace (včetně paleoekologie) se znalostmi ekologie                 a populačn&iacute; biologie rostlin. Populačn&iacute; biologie či ekofysiologie                 rostlin ned&aacute;vaj&iacute; mnoho smyslu, pokud nevezmeme v &uacute;vahu, kde a s                 k&yacute;m se ony rostliny aktu&aacute;lně vyskytuj&iacute;, př&iacute;padně jak a kdy se tam                 dostaly; podobně popis struktury, roz&scaron;&iacute;řen&iacute; nebo historie vegetace                 ned&aacute;v&aacute; mnoho smyslu, pokud nerozum&iacute;m životu rostlin, kter&eacute; onu vegetaci                 skl&aacute;daj&iacute;. </p>
    <p>Geobotanika m&aacute; podstatn&eacute; aplikace, a to nejen (i když hodně) v                 ochraně př&iacute;rody (užit&iacute; vegetačn&iacute;ch map a jin&yacute;ch vegetačn&iacute;ch dat                 v ochraně př&iacute;rody, krajinn&eacute;m pl&aacute;nov&aacute;n&iacute; atp., ekologie obnovy, bioindikace,                 Natura 2000). V &scaron;ir&scaron;&iacute;m kontextu je z&aacute;kladem pro ch&aacute;p&aacute;n&iacute; struktury                 a v&yacute;voje krajiny.</p>
    <p>&nbsp;</p>
-   <p>&nbsp;</p>				
-   
+					
+					
+	
+					</div>
+				</section>
+			</div>
+
+			
+																					   				<a name=zajemce></a> 
+		<!-- Section pro zajemce -->
+			<div class="wrapper style3">
+				<section class="container">
 
 
-<div>
-   				<a name=lide></a> 
-   				<ul>
+							<header class="major">
 
-<br></br>
-<br></br>
-     				</ul>
-</div>
-<div class="title">
-				<h2>Lidé</h2>
-
-				</div>
-				<div id="main">
-<h2>Zaměstnanci oddělení</h2>
-<table>
-<tbody>
-
-<tr>
-<td width="100"><img src="lide/th.jpg" alt="tomas herben" height="100" width="100"></td>
-<td width="8">&nbsp;</td>
-<td width="330">
-<p><b>Tomáš Herben</b> (vedoucí oddělení)<br>
-<a href="javascript:mailto('herben', 'site.cas.cz')">(herben
-(zavinac) site.cas.cz)</a><br>
-místnost: 2. patro (č. dv. 86)<br>
-<a href="http://web.natur.cuni.cz/%7Eherben">http://web.natur.cuni.cz/~herben</a><br>
-<a href="https://is.cuni.cz/studium/dipl_st/index.php?odeslano=1&fak=11310&ustav=31-120&druh_studia=&dobor=&vedouci=08072&ze_vsech_fakult=0&stupr=&fulltext=&fulltext_kde[]=nazev&skr=&skr_obhajeni=&dtyp=&kterep=all&pocet=&f=find&do=main">témata
-v SISu</a> </p>
-</td>
-<td width="8">&nbsp;</td>
-<td width="270">
-mechanismy interakce mezi jedinci a druhy, matematické
-modelování, časoprostorová a genetická struktura společenstev
-klonálních rostlin, dynamika vegetace, statistická analýza
-</td>
-</tr>
-<td width="8">&nbsp;</td>
-<tr>
-<td width="100"><img src="lide/ps.jpg" alt="petr sklenar" height="100" width="100"></td>
-<td width="8">&nbsp;</td>
-<td width="330"><b>Petr Sklenář</b>
-(zástupce vedoucího oddělení)<br>
-<a href="javascript:mailto('petr', 'natur.cuni.cz')">(petr
-(zavinac) natur.cuni.cz)</a><br>
-místnost: přízemí (č. dv. 29)<br>
-<a href="http://botany.natur.cuni.cz/cs/lide/sklenar-petr">http://botany.natur.cuni.cz/cs/lide/sklenar-petr</a><br>
-<a href="https://is.cuni.cz/studium/dipl_st/index.php?odeslano=1&fak=11310&sekce=&ustav=&druh_studia=&dobor=&vedouci=07800&amp;ze_vsech_fakult=0&amp;stupr=&amp;fulltext=&amp;fulltext_kde%5B%5D=nazev&amp;skr=&amp;skr_obhajeni=&amp;dtyp=&amp;kterep=all&amp;pocet=100&amp;f=find&amp;do=main">témata
-v SISu</a></td>
-<td width="8">&nbsp;</td>
-<td width="270">geobotanika a ekologie rostlin,
-flora a vegetace páramos
-Jižní a Střední Ameriky, fytogeografie vysokých And, taxonomie
-Caryophyllaceae
-a Asteraceae páramos (subalpínský st.)
-</td>
-</tr>
-<td width="8">&nbsp;</td>
-<tr>
-<td>&nbsp;</td>
-<td width="8">&nbsp;</td>
-<td width="330">&nbsp;</td>
-<td width="8">&nbsp;</td>
-<td width="270">&nbsp;</td>
-</tr>
-
-<tr>
-<td width="100"><img src="lide/zj.jpg" alt="zdenek janovsky" height="100" width="100"></td>
-<td width="8">&nbsp;</td>
-<td width="330">
-<p><b>Zdeněk Janovský</b><br>
-<a href="javascript:mailto('zdenekjanovsky', 'seznam.cz')">(zdenekjanovsky
-(zavinac) seznam.cz)</a><br>
-místnost: 2. patro (č. dv. 86)<br>
-<a href="https://is.cuni.cz/studium/dipl_st/index.php?odeslano=1&fak=11310&sekce=&ustav=&druh_studia=&dobor=&vedouci=24733&ze_vsech_fakult=0&stupr=&fulltext=&fulltext_kde[]=nazev&skr=&skr_obhajeni=&dtyp=&kterep=all&pocet=&f=find&do=main">t&eacute;mata v SISu</a>
-<br>
-</p>
-</td>
-<td width="8">&nbsp;</td>
-<td width="270">opylovači a jejich funkce v lučních
-ekosystémech</td>
-</tr>
-
-<tr>
-<td width="100"><img src="lide/tk.jpg" alt="tomas koubek" height="100" width="100"></td>
-<td width="8">&nbsp;</td>
-<td width="330"><b>Tomáš Koubek</b><br>
-<a href="javascript:mailto('tomas.koubek', 'gmail.com')">(tomas.koubek
-(zavinac) gmail.com)</a><br>
-místnost: 2. patro (č. dv. 86)<br>
-<a href="http://botany.natur.cuni.cz/koubek">http://botany.natur.cuni.cz/koubek</a>
-<br>
-<a href="https://is.cuni.cz/studium/dipl_st/index.php?odeslano=1&fak=11310&sekce=&ustav=&druh_studia=&dobor=&vedouci=10702&amp;ze_vsech_fakult=0&amp;stupr=&amp;fulltext=&amp;fulltext_kde%5B%5D=nazev&amp;skr=&amp;skr_obhajeni=&amp;dtyp=&amp;kterep=all&amp;pocet=&amp;f=find&amp;do=main">
-témata v SISu</a></td>
-<td width="8">&nbsp;</td>
-<td width="270">
-populace rostlin a houbové choroby, klonální rostliny, evoluce
-klonality pod vlivem chorob,
-plasticita rostlin, klíčení lučních rostlin, mangrovy</td>
-</tr>
-<tr>
-<td width="100"><img src="lide/pk.jpg" alt="pavel kovar" height="100" width="100"></td>
-<td width="8">&nbsp;</td>
-<td width="330"><b>Pavel Kovář</b><br>
-<a href="javascript:mailto('kovar', 'natur.cuni.cz')">(kovar
-(zavinac) natur.cuni.cz)</a><br>
-místnost: 2. patro (č. dv. 87)<br>
-<a href="http://botany.natur.cuni.cz/cs/lide/kovar-pavel">http://botany.natur.cuni.cz/cs/lide/kovar-pavel</a><br>
-<a href="https://is.cuni.cz/studium/dipl_st/index.php?odeslano=1&fak=11310&sekce=&ustav=&druh_studia=&dobor=&vedouci=08149&amp;ze_vsech_fakult=0&amp;stupr=&amp;fulltext=&amp;fulltext_kde%5B%5D=nazev&amp;skr=&amp;skr_obhajeni=&amp;dtyp=&amp;kterep=all&amp;pocet=&amp;f=find&amp;do=main">témata
-v SISu</a></td>
-<td width="8">&nbsp;</td>
-<td width="270">ekologie extrémů – sukcese a
-kolonizace (průmyslové deponie,
-sopečné substráty v tropech, disturbance po povodních), interakce
-mravenci-rostliny-krajina, ekologie obnovy
-</td>
-</tr>
-<tr>
-<td width="100"><img src="lide/kun2.jpg" alt="petr kunes" height="100" width="100"></td>
-<td width="8">&nbsp;</td>
-<td width="330"><b>Petr Kuneš</b><br>
-<a href="javascript:mailto('petr.kunes', 'natur.cuni.cz')">(petr.kunes
-(zavinac) natur.cuni.cz)</a><br>
-místnost: 3. mezipatro (č. dv. 106)<br>
-<a href="http://petr.kunes.net/">http://petr.kunes.net/</a><br>
-<a href="https://is.cuni.cz/studium/dipl_st/index.php?odeslano=1&fak=11310&sekce=&ustav=&druh_studia=&dobor=&vedouci=08183&amp;ze_vsech_fakult=0&amp;stupr=&amp;fulltext=&amp;fulltext_kde%5B%5D=nazev&amp;skr=&amp;skr_obhajeni=&amp;dtyp=&amp;kterep=all&amp;pocet=&amp;f=find&amp;do=main">témata
-v SISu</a></td>
-<td width="8">&nbsp;</td>
-<td width="270"><font size="2">paleoekologie
-a vývoj vegetace
-pleistocénu a holocénu, studium interglaciálů, lidský vliv, numerické
-metody v paleoekologii, pylová analýza, vztah pylového spadu a
-vegetace, kvantitativní rekonstrukce vegetace</font>
-</td>
-</tr>
-<tr>
-<td width="100"><img src="lide/bl.jpg" width="100" height="100" alt="Bára Lepková"></td>
-<td width="8">&nbsp;</td>
-<td width="330"><b>Barbora Lepkov&aacute;</b><br>
-<a href="javascript:mailto('barbora.lepkova', 'natur.cuni.cz')">(barbora.lepkova
-(zavinac) natur.cuni.cz)</a><br>
- místnost: přízemí (č. dv. 28)</td>
-<td width="8">&nbsp;</td>
-<td width="270">zoochorie u velk&yacute;ch kopytn&iacute;ků, péče o laboratoř
-geobotaniky</td>
-</tr>
-<tr>
-<td width="100"><img src="lide/zm.jpg" alt="zuzana munzbergova" height="100" width="100"></td>
-<td width="8">&nbsp;</td>
-<td width="330"><b>Zuzana Münzbergová</b><br>
-<a href="javascript:mailto('zuzmun', 'natur.cuni.cz')">(zuzmun
-(zavinac) natur.cuni.cz)</a><br>
-místnost: 1. mezipatro (č. dv. 58)<br>
-<a href="http://web.natur.cuni.cz/%7Ezuzmun">http://web.natur.cuni.cz/~zuzmun</a><br>
-<a href="https://is.cuni.cz/studium/dipl_st/index.php?odeslano=1&fak=11310&sekce=&ustav=&druh_studia=&dobor=&vedouci=09098&amp;ze_vsech_fakult=0&amp;stupr=&amp;fulltext=&amp;fulltext_kde%5B%5D=nazev&amp;skr=&amp;skr_obhajeni=&amp;dtyp=&amp;kterep=all&amp;pocet=100&amp;f=find&amp;do=main&amp;f=Najdi">témata
-v SISu</a></td>
-<td width="8">&nbsp;</td>
-<td width="270">populační biologie a genetika,
-dynamika druhů v
-krajině, ochranářská biologie, interakce rostlin a herbivorů (od hmyzu
-po ovce), vzácné a invazní druhy rostlin
-</td>
-</tr>
-</tbody>
-</table>
-<h2>Zaměstnanci na výzkumných místech</h2>
-<table>
-<tbody>
-<tr>
-<td><img src="lide/va.jpg" alt="vojtech abraham" height="100" width="100"></td>
-<td width="8">&nbsp;</td>
-<td width="330">
-<p><b>Vojtěch Abraham<br>
-</b><a href="javascript:mailto('vojtech.abraham', 'gmail.com')">(vojtech.abraham
-(zavinac) gmail.com)</a><br>
-místnost: 3. mezipatro (č. dv. 106)<br>
-<a href="https://is.cuni.cz/studium/dipl_st/index.php?odeslano=1&fak=11310&sekce=&ustav=&druh_studia=&dobor=&vedouci=21940&amp;stupr=&amp;fulltext=&amp;fulltext_kde%5B%5D=nazev&amp;skr=&amp;skr_obhajeni=&amp;dtyp=&amp;kterep=all&amp;pocet=&amp;f=find&amp;do=main" target="_blank">témata v SISu</a> </p>
-</td>
-<td width="8">&nbsp;</td>
-<td width="270">paleoekologie kvartéru, pylové mapy
-a produkce</td>
-</tr>
-<tr>
-<td><img src="lide/td.jpg" alt="tomas dostalek" height="100" width="100"></td>
-<td width="8">&nbsp;</td>
-<td width="330">
-<p><b>Tomáš Dostálek</b><br>
-<a href="javascript:mailto('tomas.dostalek', 'natur.cuni.cz')">(tomas.dostalek
-(zavinac) natur.cuni.cz)</a><br>
-místnost: 1. mezipatro (č. dv. 58)</p>
-</td>
-<td width="8">&nbsp;</td>
-<td width="270">populační biologie,
-genetická diverzita, vzácné (a invazní) druhy rostlin&nbsp;</td>
-</tr>
-<tr>
-  <td width="100"><img src="lide/mw.jpg" alt="martin weiser" height="102" width="100"></td>
-  <td width="8">&nbsp;</td>
-  <td width="330"><b>Martin Weiser</b><br>
-  <a href="javascript:mailto('weiser2', 'natur.cuni.cz')">(weiser2
-    (zavinac) natur.cuni.cz)</a><br>
-    místnost: přízemí (č. dv. 23)<br>
-  <a href="https://is.cuni.cz/studium/dipl_st/index.php?odeslano=1&fak=11310&sekce=&ustav=&druh_studia=&dobor=&vedouci=08522&amp;ze_vsech_fakult=0&amp;stupr=&amp;fulltext=&amp;fulltext_kde%5B%5D=nazev&amp;skr=&amp;skr_obhajeni=&amp;dtyp=&amp;kterep=all&amp;pocet=100&amp;f=find&amp;do=main">témata
-    v SISu</a></td>
-  <td width="8">&nbsp;</td>
-  <td width="270">kompetice nad zemí i pod zemí,
-    plasticita&nbsp;rostlin</td>
-</tr>
-</tbody>
-</table>
-<h2>Emeritní pedagog</h2>
-<table>
-<tbody>
-<tr>
-<td width="123"><b>Jarmila Kubíková</b></td>
-</tr>
-</tbody>
-</table>
-<h2>Externí školitelé a pedagogové</h2>
-<table>
-<tbody>
-<tr>
-<td width="140"><b>Věra Hadincová</b></td>
-<td width="20">&nbsp;</td>
-<td width="270"><a href="javascript:mailto('hadincova', 'ibot.cas.cz')">(hadincova
-(zavinac) ibot.cas.cz)</a></td>
-<td width="20">&nbsp;</td>
-<td width="100"><a href="https://is.cuni.cz/studium/dipl_st/index.php?odeslano=1&fak=11310&sekce=&ustav=&druh_studia=&dobor=&vedouci=08722&amp;ze_vsech_fakult=0&amp;stupr=&amp;fulltext=&amp;fulltext_kde%5B%5D=nazev&amp;skr=&amp;skr_obhajeni=&amp;dtyp=&amp;kterep=&amp;pocet=&amp;f=find&amp;do=main&amp;f=Najdi" target="_blank">témata v SISu</a></td>
-</tr>
-<tr>
-<td><b>Handrij Härtel</b></td>
-<td>&nbsp;</td>
-<td width="270"><a href="javascript:mailto('handrij.hartel', 'nature.cz')">(handrij.hartel
-(zavinac) nature.cz)</a></td>
-<td width="20">&nbsp;</td>
-<td width="100">&nbsp;</td>
-</tr>
-<tr>
-<td><b>Radim Hédl</b></td>
-<td width="20">&nbsp;</td>
-<td width="270"><a href="javascript:mailto('rhe', 'centrum.cz')">(rhe (zavinac)
-centrum.cz)</a></td>
-<td width="20">&nbsp;</td>
-<td width="100"><a href="https://is.cuni.cz/studium/dipl_st/index.php?odeslano=1&fak=11310&sekce=&ustav=&druh_studia=&dobor=&vedouci=08440&amp;ze_vsech_fakult=0&amp;stupr=&amp;fulltext=&amp;fulltext_kde%5B%5D=nazev&amp;skr=&amp;skr_obhajeni=&amp;dtyp=&amp;kterep=all&amp;pocet=100&amp;f=find&amp;do=main">témata
-v SISu</a></td>
-</tr>
-<tr>
-<td><b>Jindřich Chrtek</b></td>
-<td width="20">&nbsp;</td>
-<td width="270"><a href="javascript:mailto('chrtek', 'ibot.cas.cz')">(chrtek
-(zavinac) ibot.cas.cz)</a></td>
-<td width="20">&nbsp;</td>
-<td width="100">&nbsp;</td>
-</tr>
-<tr>
-<td><b>Vojen Ložek</b></td>
-<td>&nbsp;</td>
-<td width="270">&nbsp;</td>
-<td width="20">&nbsp;</td>
-<td width="100">&nbsp;</td>
-</tr>
-<tr>
-<td><b>Jan Novák</b></td>
-<td width="20">&nbsp;</td>
-<td width="270"><a href="javascript:mailto('prouza', 'prf.jcu.cz')">(prouza
-(zavinac) prf.jcu.cz)</a></td>
-<td width="20">&nbsp;</td>
-<td width="100"><a href="https://is.cuni.cz/studium/dipl_st/index.php?odeslano=1&fak=11310&ustav=31-120&druh_studia=&dobor=&vedouci=21761&ze_vsech_fakult=0&stupr=&fulltext=&fulltext_kde[]=nazev&skr=&skr_obhajeni=&dtyp=&kterep=all&pocet=100&f=find&do=main">témata
-v SISu</a></td>
-</tr>
-<tr>
-<td><b>Jan Pergl</b></td>
-<td width="20">&nbsp;</td>
-<td width="270"><a href="javascript:mailto('pergl', 'ibot.cas.cz')">(pergl
-(zavinac) ibot.cas.cz)</a></td>
-<td width="20">&nbsp;</td>
-<td width="100">&nbsp;</td>
-</tr>
-<tr>
-<td><b>Petr Pokorný</b></td>
-<td width="20">&nbsp;</td>
-<td width="270"><a href="javascript:mailto('pokorny', 'cts.cuni.cz')">(pokorny
-(zavinac) cts.cuni.cz)</a></td>
-<td width="20">&nbsp;</td>
-<td width="100"><a href="https://is.cuni.cz/studium/dipl_st/index.php?odeslano=1&fak=11310&sekce=&ustav=&druh_studia=&dobor=&vedouci=09138&amp;ze_vsech_fakult=0&amp;stupr=&amp;fulltext=&amp;fulltext_kde%5B%5D=nazev&amp;skr=&amp;skr_obhajeni=&amp;dtyp=&amp;kterep=all&amp;pocet=100&amp;f=find&amp;do=main">témata
-v SISu</a></td>
-</tr>
-<tr>
-<td><b>Petr Pyšek</b></td>
-<td>&nbsp;</td>
-<td width="270"><a href="javascript:mailto('pysek', 'ibot.cas.cz')">(pysek
-(zavinac) ibot.cas.cz)</a></td>
-<td width="20">&nbsp;</td>
-<td width="100">&nbsp;</td>
-</tr>
-<tr>
-<td><b>Ota Rauch</b></td>
-<td width="20">&nbsp;</td>
-<td width="270"><a href="javascript:mailto('rauch', 'butbn.cas.cz')">(rauch
-(zavinac) butbn.cas.cz)</a></td>
-<td width="20">&nbsp;</td>
-<td width="100">&nbsp;</td>
-</tr>
-<tr>
-<td><b>Jiří Sádlo</b></td>
-<td width="20">&nbsp;</td>
-<td width="270"><a href="javascript:mailto('saadlo', 'volny.cz')">(saadlo
-(zavinac) volny.cz)</a></td>
-<td width="20">&nbsp;</td>
-<td width="100"><a href="https://is.cuni.cz/studium/dipl_st/index.php?odeslano=1&fak=11310&sekce=&ustav=&druh_studia=&dobor=&vedouci=08864&amp;ze_vsech_fakult=0&amp;stupr=&amp;fulltext=&amp;fulltext_kde%5B%5D=nazev&amp;skr=&amp;skr_obhajeni=&amp;dtyp=&amp;kterep=all&amp;pocet=100&amp;f=find&amp;do=main">témata
-v SISu</a></td>
-</tr>
-<tr>
-<td><b>Hana Skálová</b></td>
-<td width="20">&nbsp;</td>
-<td width="270"><a href="javascript:mailto('skalova', 'ibot.cas.cz')">(skalova
-(zavinac) ibot.cas.cz)</a></td>
-<td width="20">&nbsp;</td>
-<td width="100">&nbsp;</td>
-</tr>
-<tr>
-<td><b>David Storch</b></td>
-<td>&nbsp;</td>
-<td width="270"><a href="javascript:mailto('storch', 'cts.cuni.cz')">(storch
-(zavinac) cts.cuni.cz)</a></td>
-<td width="20">&nbsp;</td>
-<td width="100">&nbsp;</td>
-</tr>
-<tr>
-<td><b>Jan Wild</b></td>
-<td width="20">&nbsp;</td>
-<td width="270"><a href="javascript:mailto('wild', 'ibot.cas.cz')">(wild
-(zavinac) ibot.cas.cz)</a></td>
-<td width="20">&nbsp;</td>
-<td width="100"><a href="https://is.cuni.cz/studium/dipl_st/index.php?odeslano=1&fak=11310&sekce=&ustav=&druh_studia=&dobor=&vedouci=08178&amp;ze_vsech_fakult=0&amp;stupr=&amp;fulltext=&amp;fulltext_kde%5B%5D=nazev&amp;skr=&amp;skr_obhajeni=&amp;dtyp=&amp;kterep=all&amp;pocet=100&amp;f=find&amp;do=main">témata
-v SISu</a></td>
-</tr>
-</tbody>
-</table>
-<h2>Doktorandi </h2>
-<table>
-<tbody>
-<tr><td width="240"><b>Aldorfová Anna</b></td><td width="20">&nbsp;</td><td><a href="javascript:mailto('ancaflorianova, 'centrum.cz')">(ancaflorianova (zavinac) centrum.cz)</a></td><td width="17">&nbsp;</td><td width="100">&nbsp;</td></tr>
-<tr>
-  <td width="240"><b>Martin Adámek</b></td>
-  <td width="20">&nbsp;</td>
-  <td width="280"><a href="javascript:mailto('martynek', 'seznam.cz')">(martynek
-    (zavinac) seznam.cz)</a></td>
-  <td width="17">&nbsp;</td>
-  <td width="100">&nbsp;</td>
-</tr>
-<tr>
-<td width="240"><b>Přemysl Bobek</b></td>
-<td width="20">&nbsp;</td>
-<td><a href="javascript:mailto('premyslbobek', 'volny.cz')">(premyslbobek
-(zavinac) volny.cz)</a></td>
-<td width="17">&nbsp;</td>
-<td width="100">&nbsp;</td>
-</tr>
-<tr>
-  <td width="240"><b>Bára Čepelová</b></td>
-  <td width="20">&nbsp;</td>
-  <td><a href="javascript:mailto('baracpl', 'seznam.cz')">(baracpl
-    (zavinac) seznam.cz)</a></td>
-  <td width="17">&nbsp;</td>
-  <td width="100">&nbsp;</td>
-</tr>
-<tr>
-<td width="240"><b>Zita Červenková</b></td>
-<td width="20">&nbsp;</td>
-<td><a href="javascript:mailto('zita.cerv', 'gmail.com')">(zita.cerv
-(zavinac) gmail.com)</a></td>
-<td width="17">&nbsp;</td>
-<td width="100">&nbsp;</td>
-</tr>
-<tr>
-  <td><b>Lucie Drhovsk&aacute;</b></td>
-  <td>&nbsp;</td>
-  <td><a href="javascript:mailto('dr.lucinka', 'seznam.cz')">(dr.lucinka
-    (zavinac) seznam.cz)</a></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-  <td width="240"><b>Jana Duchoslavov&aacute;</b></td>
-  <td width="20">&nbsp;</td>
-  <td><a href="javascript:mailto('vinsovaj', 'natur.cuni.cz')">(vinsovaj
-    (zavinac) natur.cuni.cz)</a></td>
-  <td width="17">&nbsp;</td>
-  <td width="100">&nbsp;</td>
-</tr>
-<td width="240"><b>Martina Entová</b></td>
-<td width="20">&nbsp;</td>
-<td><a href="javascript:mailto('eskela', 'post.cz')">(eskela (zavinac) post.cz)</a></td>
-<td width="17">&nbsp;</td>
-<td width="100">&nbsp;</td>
-<tr>
-<td width="240"><b>Jarmila Gabrielová</b></td>
-<td width="20">&nbsp;</td>
-<td><a href="javascript:mailto('jarmila.gabrielova', 'seznam.cz')">(jarmila.gabrielova
-(zavinac) seznam.cz)</a></td>
-<td width="17">&nbsp;</td>
-<td width="100">&nbsp;</td>
-</tr>
-<tr>
-  <td width="240"><b>Eva Horčičková</b></td>
-  <td width="20">&nbsp;</td>
-  <td><a href="javascript:mailto('e.horcickova', 'centrum.cz')">(e.horcickova
-    (zavinac) centrum.cz)</a></td>
-  <td width="17">&nbsp;</td>
-  <td width="100"><a href="javascript:mailto('barbora.lepkova', 'seznam.cz')">témata
-    v SISu</a></td>
-</tr>
-<tr>
-<td width="240"><b>Lin Huang</b></td>
-<td width="20">&nbsp;</td>
-<td><a href="javascript:mailto('huanglin18', '163.com')">(huanglin18 (zavinac) 163.com)</a></td>
-<td width="17">&nbsp;</td>
-<td width="100">&nbsp;</td>
-</tr>
-<tr>
-<td width="240"><b>Iveta Husáková</b></td>
-<td width="20">&nbsp;</td>
-<td><a href="javascript:mailto('iveta.husakova', 'volny.cz')">(iveta.husakova
-(zavinac) volny.cz)</a></td>
-<td width="17">&nbsp;</td>
-<td width="100">&nbsp;</td>
-</tr>
-<tr>
-<td width="240"><b>Eva Jamrichová</b></td>
-<td width="20">&nbsp;</td>
-<td><a href="javascript:mailto('jamriska', 'post.sk')">(jamriska
-(zavinac) post.sk)</a></td>
-<td width="17">&nbsp;</td>
-<td width="100">&nbsp;</td>
-</tr>
-<tr>
-  <td><b>Tom&aacute;&scaron; Javorsk&yacute;</b></td>
-  <td>&nbsp;</td>
-  <td><a href="javascript:mailto('T.M.Javorsky', 'seznam.cz')">(t.m.javorsky (zavinac) seznam.cz)</a></td>
-  <td width="17">&nbsp;</td>
-  <td width="100">&nbsp;</td>
-</tr>
-<tr>
-  <td width="240"><b>Anna Kladivová</b></td>
-  <td width="20">&nbsp;</td>
-  <td><a href="javascript:mailto('kafesezmrzlinou', 'seznam.cz')">(kafesezmrzlinou
-    (zavinac) seznam.cz)</a></td>
-  <td width="17">&nbsp;</td>
-  <td width="100">&nbsp;</td>
-</tr>
-<tr>
-<td width="240"><b>Tereza Klinerová</b></td>
-<td width="20">&nbsp;</td>
-<td><a href="javascript:mailto('terezka.kl', 'seznam.cz')">(terezka.kl
-(zavinac) seznam.cz)</a></td>
-<td width="17">&nbsp;</td>
-<td width="100">&nbsp;</td>
-</tr>
-<tr>
-  <td width="240"><b>Eliška Kuťáková</b></td>
-  <td width="20">&nbsp;</td>
-  <td><a href="javascript:mailto('kutakova.eliska','gmail.com ')">(kutakova.eliska (zavinac) gmail.com)</a></td>
-  <td width="17">&nbsp;</td>
-  <td width="100">&nbsp;</td>
-</tr>
-<tr>
-  <td><b>Barbora Lepkov&aacute;</b></td>
-  <td>&nbsp;</td>
-  <td><a href="javascript:mailto('barbora.lepkova', 'natur.cuni.cz')">(barbora.lepkova
-(zavinac) natur.cuni.cz)</a><a href="javascript:mailto('b.lepkova', 'seznam.cz')"></a></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-<td width="240"><b>Martin Macek</b></td>
-<td width="20">&nbsp;</td>
-<td><a href="javascript:mailto('cingis', 'volny.cz')">(cingis
-(zavinac) volny.cz)</a></td>
-<td width="17">&nbsp;</td>
-<td width="100">&nbsp;</td>
-</tr>
-<tr>
-  <td width="240"><b>Hana Mayerová</b></td>
-  <td width="20">&nbsp;</td>
-  <td><a href="javascript:mailto('mayerova.ha', 'volny.cz')">(mayerova.ha
-    (zavinac) volny.cz)</a></td>
-  <td width="17">&nbsp;</td>
-  <td width="100">&nbsp;</td>
-</tr>
-<tr>
-  <td><b>Barbora Obstov&aacute;</b></td>
-  <td>&nbsp;</td>
-  <td><a href="javascript:mailto('barbora.obstova', 'natur.cuni.cz')">(barbora.obstova
-    (zavinac) natur.cuni.cz)</a></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-  <td width="240"><b>Adéla Pokorná</b></td>
-  <td width="20">&nbsp;</td>
-  <td><a href="javascript:mailto('adepo', 'seznam.cz')">(adepo
-    (zavinac) seznam.cz)</a></td>
-  <td width="17">&nbsp;</td>
-  <td width="100">&nbsp;</td>
-</tr>
-<tr>
-  <td><b>Anna Potůčkov&aacute;</b></td>
-  <td>&nbsp;</td>
-  <td><a href="javascript:mailto('annapotuckova6', 'gmail.com')">(annapotuckova6
-    (zavinac) gmail.com)</a></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-  <td width="240"><b>Jindra Prach</b></td>
-  <td width="20">&nbsp;</td>
-  <td><a href="javascript:mailto('jindraprach', 'seznam.cz')">(jindraprach
-    (zavinac) seznam.cz)</a></td>
-  <td width="17">&nbsp;</td>
-  <td width="100">&nbsp;</td>
-</tr>
-<tr>
-  <td><b>Alejandra Pilar Rendina Gonz&aacute;lez</b></td>
-  <td>&nbsp;</td>
-  <td><a href="javascript:mailto('a.rendinagonzalez','gmail.com')">(a.rendinagonzalez (zavinac) gmail.com)</a></td>
-  <td>&nbsp;</td>
-  <td>&nbsp;</td>
-</tr>
-<tr>
-  <td width="240"><b>Linda Zajíčková</b></td>
-  <td width="20">&nbsp;</td>
-  <td><a href="javascript:mailto('lindazajickova', 'seznam.cz')">(lindazajickova
-    (zavinac) seznam.cz)</a></td>
-  <td width="17">&nbsp;</td>
-  <td width="100">&nbsp;</td>
-</tr>
-<tr>
-  <td width="240"><b>Pavla Žáčková</b></td>
-  <td width="20">&nbsp;</td>
-  <td><a href="javascript:mailto('pa.zackova', 'seznam.cz')">(pa.zackova
-    (zavinac) seznam.cz)</a></td>
-  <td width="17">&nbsp;</td>
-  <td width="100">&nbsp;</td>
-</tr>
-</tbody>
-</table>
-		<a name=temata></a> <p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-
-
-             <div class="title">
-				<h2>Témata</h2>
-             </div>
-		             <div class="main">
-
-</div>
-	<p>Zde v budoucnu najdete odkazy na nově vypsané bakalářské a
-diplomové práce. Prozatím se můžete porozhlédnout na stránkách <a href="lide.htm">Lidé</a> (odkazy do SISu na vypsaná
-témata) a <a href="skupiny.htm">Skupiny</a>	(tam
-najdete výzkumné skupiny a příklady řešených problémů a můžete napsat
-jejich garantům o více informací).</p>
-<p>Pokud k n&aacute;m m&iacute;ř&iacute;te, pod&iacute;vejte se tak&eacute;, jak&eacute; <a href="pozadavky.htm">znalosti</a> od v&aacute;s oček&aacute;v&aacute;me.</p>
+								<h2>Pro zájemce o studium</h2>
+								</header>
 <b>Zadávání bakalářských a magisterských prací na oddělení
 geobotaniky</b>
 <ul>
@@ -738,24 +250,792 @@ typicky navazuje na téma bakalářské (není to ale podmínka). Téma v
 každém případě konsultujte s příslušným potenciálním vedoucím. Ten s
 Vámi také sepíše zadávací protokol.</li>
 </ul>
-		<a name=zivot></a> 
+																										   				<a name=temata></a> 
+	
+
+				</section>
+			</div>
+				<!-- Section temata -->
+			<div class="wrapper style3">
+				<section class="container">
+
+							<header class="major">
+
+							
+					
+																											   				<a name=populacka></a> 
+					<h2>Témata</h2>
+								</header>
+						<p></p>
+
+
+<h2>Populační ekologie rostlin</h2><br> 
+
+<li>dynamika rostlinných populací, role jednotlivých složek jejich životního cyklu <br></li>
+<li>srovnávací demografie rostlin, jaké jsou klíčové trade-off životních strategií rostlin, jaké charakteristiky své životní strategie mohou rostliny v evoluci měnit snáze a jaké hůře <br></li>
+<li>populační biologie invazních rostlin: hledání slabých míst v jejich životním cyklu pro jejich cílený management <br></li>
+<li>šíření rostlin v krajině a metapopulační dynamika, jak se rostliny vyrovnávají s měnící se krajinou, význam změn krajiny pro rozšíření druhů i celých společenstev, krajinná dynamika druhů v systému fragmentovaných populací suchých trávníků. Význam dálkového šíření semen pro krajinou dynamiku druhů<br></li>
+<li>populační modely klonálních rostlin: jak se vyrovnat s tím, že rostliny nemají jasně definované jedince, takže naše "živočišná" zkušenost nám nepomáhá<br></li>
+<li>Populační dynamika cytotypově smíšených populací <br></li>
+<li>populační biologie rostlin napadených systemickými patogeny – jaký vliv má patogen na rostlinu na populační úrovni?<br></li>
+
+Aktuální náměty možných prací bakalářských/diplomových/disertačních prací: viz SIS <br>
+Kontakt: Zuzana Münzbergová, Zdeněk Janovský, Tomáš Dostálek, Tomáš Koubek
+
+																						   				<a name=interakce></a> 
 <p>&nbsp;</p>
-<p>&nbsp;</p>
-</div>	
+					
+					<h2>Interakce rostlin s herbivory (velkými a malými, domestikovanými i volně žijícími)</h2><br> 
+	<a href="https://www.facebook.com/Hypoteticky.jednorozec" class="motyl"><img src="images/mot.png" style=width:350px;height:580px align= "right" alt=""></a>
+<li>Jak velcí herbivoři ovlivňují vegetaci na krajinné škále? Dokážou volně žijící herbivoři udržet krajinu otevřenou?</li>
+<li>Jak ovlivňují vegetaci na úrovni společenstev? Jaký vliv má jejich pohyb na vegetaci v okolí cestiček? Dokáží obohatit louku přinesením semen druhů z okolí?</li>
+<li>Jak jedinci rostlin reagují na okus (ať už simulovaný či reálný)?</li>
+<li>Využití velkých herbivorů při plánování managementu chráněných území</li>
+<li>jak hmyzí herbivoři (zejména predátoři semen) ovlivňují populační dynamiku rostlin</li>
+<p></p>
+Aktuální náměty možných prací bakalářských/diplomových/disertačních prací: viz SIS</h2><br> 
+Kontakt: Barbora Lepková, Eva Horčičková (velcí herbivoři),<br>	Zdeněk Janovský, Zuzana Münzbergová, Tomáš Dostálek (malí herbivoři)
+					
+																					<a name=klonalita></a> 
+<p>&nbsp;</p>				
+					
+		<h2>Klonální rostliny </h2><br> 
+<li>vegetativní/klonální růst jako klíčový (ale opomíjený) životní projev většiny rostlin, jeho možnosti a vztah k prostředí</li>
+<li>klonální růst jako způsob přesného umisťování potomstva a pohybu rostlin v prostředí vůbec</li>
+<li>klonální potomstvo jako pojistka pro případ poškození: jak se liší klonální rostliny od neklonálních v reakci na disturbanci (třeba mechanickou)</li>
+<li>mateřská investice u klonálních rostlin: jak je silná, jak dlouho trvá a k čemu vlastně je (použití stabilních izotopů i ekologických pokusů) </li>
+<p></p>
+Aktuální náměty možných prací bakalářských/diplomových/disertačních prací: viz SIS</h2><br> 
+Kontakt: Jitka Klimešová, Jana Duchoslavová, Tomáš Herben, Martin Weiser, Tomáš Koubek			
+						<a name=chovani></a> 
+		<p>&nbsp;</p>							
+					
+					
+<h2>"Chování" rostlin a experimentální ekologie</h2><br>
+
+<li>chování rostlin a fenotypická plasticita: jak rostliny reagují na své sousedy, na herbivory a vůbec na měnící se okolní prostředí. Dohody, klamy, hrozby, ústupky, agrese a smír v podání rostlin.</li>
+<li>vzájemné vztahy rostlinných jedinců v porostech: jak reakce na sousedy určuje vlastnosti celého porostu</li>
+<li>je fenotypická plasticita v pozadí toho, jak jsou rostliny běžné/vzácné?</li>
+<li>jak se rostliny starají o potomstvo – jak podstrojují klonálním potomkům a do jaké míry je používají jen jako rozšířené orgány pro získávání zdrojů pro sebe?</li>
+<p></p>
+Aktuální náměty možných prací bakalářských/diplomových/disertačních prací: viz SIS<br>
+Kontakt: Martin Weiser, Jana Duchoslavová, Tomáš Herben, Tereza Mašková, Tomáš Koubek<br>
+								<a name=opylovani></a> 
+								
+
+		<p>&nbsp;</p>							
+
+<h2>Ekologie opylovačů a opylovaní rostlin</h2>		<br>						
+<li>jak souvisí vlastnosti květů rostliny se spektrem jejích opylovačů (jeho generalisovaností/specialisovaností), a úspěšností přenosu pylu na jedince stejného druhu</li>
+<li>roznášejí pyl motýli jinak než pestřenky a ty jinak než včely? Srovnání hlavních skupin opylovačů v chování a v úspěšnosti přenosu pylu</li>
+<li>jak prostorové uspořádání rostlin v populaci a souběžně kvetoucí druhy ovlivňují prostorové chování opylovačů, kradou si rostliny navzájem opylovače, nebo si naopak pomáhají obecným zvýšením atraktivity lokálního porostu</li>
+<li>jak houbové patogeny manipulují růst a fenologii rostliny a jejich opylovače, a jak jim tyto schopnosti umožňují se šířit</li>
+<li>Jak se rostliny vyhýbají samoopylení – co když můj nejbližší soused je geneticky identický, protože to je potomek vegetativního růstu</li>
+<p></p>
+Aktuální náměty možných prací bakalářských/diplomových/disertačních prací: viz SIS<br>
+Kontakt: Zdeněk Janovský, Tomáš Koubek, Klára Koupilová
+
+								<a name=semena></a> 	
+		<p>&nbsp;</p>							
+
+<h2> Ekologie semen (jak se rostliny starají o potomstvo)</h2><br>
+
+<li>kolik živin (a jakých – uhlík nebo dusík/fosfor) připravují potomkům rostliny v semenech, jak to závisí na podmínkách prostředí, kde (asi) semeno bude klíčit?</li>
+<li>jak umožňují potomkům efektivní přesun dál od mateřské rostliny a co to ovlivňuje?</li>
+<li>vliv souseda aneb vím, kdo vedle mě roste? Změny v klíčení a růstu pod vlivem různých sousedských druhů.</li>
+<li>jak rostliny různých stanovišť optimalizují rychlost klíčení a dormanci semen?</li>
+<p></p>
+Aktuální náměty možných prací bakalářských/diplomových/disertačních prací: viz SIS<br>
+Kontakt: Tereza Mašková, Barbora Lepková, Andrea Veselá, Martin Weiser
+	<a name=koreny></a> 	
+		<p>&nbsp;</p>							
+
+<h2>Ekologie podzemních orgánů rostlin</h2><br>
+
+<li>jak reagují kořeny v terénu (třeba v zapojené louce) na své sousedy a na dostupnost minerálií. Pomůžou nám znalosti z květináčových pokusů k porozumění tohoto složitého světa venku?</li>
+<li>použití molekulárních technik (zejména kvantitativní PCR) pro určení přítomnosti a kvantity kořenů jednotlivých druhů v terénu (protože kořeny pod zemí se nedají jinak rozlišit do druhů)</li>
+<li>kořeny a oddenky jako zásobárna živin přes zimu i jako zásobárna pupenů pro rychlý růst na jaře: jak se tím liší jednotlivé rostlinné druhy?</li>
+<li>růst kořenů v čase a prostoru, soužití a vzájemná zastupitelnost kořenů a mykorhizních hub</li>
+<p></p>
+Aktuální náměty možných prací bakalářských/diplomových/disertačních prací: viz SIS<br>
+Kontakt: Martin Weiser, Tomáš Herben, Jitka Klimešová, Pavlína Knobová
+	<a name=psf></a> 		
+		<p>&nbsp;</p>							
+
+<h2>Zpětná vazba mezi rostlinou a půdou (plant-soil feedback, PSF) </h2><br>
+<li>kořeny rostlin mění půdu, v níž rostou, ať už chemicky (změny dostupnosti minerálií, kořenové exudáty), tak i biologicky (růst patogenů a symbiontů). Naším cílem je zjistit, jakou roli tento jev má v přírodě – pro vzájemné vztahy rostlin (kompetici, mutualismus) a jejich úspěšnost v přírodě</li>
+<li>jak roli má tento plant-soil feedback pro rostlinné invaze. Jsou úspěšné invazní druhy schopny jej používat pro vlastní růst a potlačení konkurentů? Význam biotické a abiotické složky půdy pro predikci invazivnosti druhů. Význam půdních hub pro intenzitu vnitrodruhové zpětné vazby u invazních druhů.</li>
+<li>jak rozlišit jednotlivé složky plant-soil feedbacku  (anorganické, organické složky, symbionti a patogeny) pomocí molekulárních a analytických technik</li>
+<li>jakou roli má tento plant-soil feedback v dynamice rostlinných společenstev. Zpětná vazba mezi rostlinou a půdou jako klíčový faktor v primární sukcesi na antropogenních substrátech.  </li>
+<li>lze využít druhových vlastností pro predikci typu a intenzity plant-soil feedbacku. Rychlost dekompozice, produkce kořenových exudátů a struktura kořenového systému jako prediktory interakce rostlin a půdy.</li>
+<p></p>
+Aktuální náměty možných prací bakalářských/diplomových/disertačních prací: viz SIS<br>
+Kontakt: Zuzana Münzbergová, Anna Aldorfová, Eliška Kuťáková, Tomáš Herben
+	<a name=tropy></a> 		
+		<p>&nbsp;</p>							
+
+<h2>Eko(fyzio)logie horských rostlin v tropech i temperátu</h2><br>
+<li>fyziologická ekologie horských tropických rostlin, adaptace na teplotní extrémy, mechanismy odolnosti vůči mrazu</li>
+<li>vliv sezónnosti klimatu na vývoj adaptací a funkčních vlastností rostlin, vztah k rozšíření druhů a celých skupin/linií</li>
+<p></p>
+Aktuální náměty možných prací bakalářských/diplomových/disertačních prací: viz SIS<br>
+Kontakt: Petr Sklenář
+	<a name=adaptace></a> 		
+		<p>&nbsp;</p>							
+<h2>Adaptace rostlin ke změnám klimatu</h2><br>
+<li>Genetická a epigenetická diferenciace a plasticita v reakci rostlin na měnící se klima </li>
+<li>Klíčení jako významný faktor podmiňující možnost druhů se adaptovat na nové podmínky </li>
+<li>Možnosti rychlé adaptace druhů na měnící se klima – experimentální evoluce </li>
+<li>Jak se mění vztahy rostlin a dalších organismů (herbivoři, mykorhizy...) s měnícím se klimatem, a co to může znamenat pro schopnost rostlin se změnám klimatu přizpůsobit </li>
+<p></p>
+Aktuální náměty možných prací bakalářských/diplomových/disertačních prací: viz SIS <br>
+Kontakt: Zuzana Münzbergová, Tomáš Dostálek, Andrea Veselá 
+	<a name=evoluce_forem></a> 		
+		<p>&nbsp;</p>							
+<h2>Evoluce růstových forem a diversifikace, evoluce bylinnosti</h2><br>
+<li>ekologie jihoamerických páramos, příčiny jejich biodiverzity, evoluce a fylogeneze modelových skupin v podmínkách vysokých hor s ostrými gradienty a migračními bariérami</li>
+<li>jaké faktory podmiňovaly vznik bylin ze dřevin: fylogenetická analýza i srovnávací experimenty </li>
+<li>čím se funkčně liší byliny od dřevin - některé věci jsou zřejmé (výška, přezimování), ale mnohé jsou stále neznámé (odolnost proti disturbanci v mládí, schopnost plastické reakce, fenologie) </li>
+<p></p>
+Aktuální náměty možných prací bakalářských/diplomových/disertačních prací: viz SIS <br>
+Kontakt: Petr Sklenář, Adam Klimeš, Tomáš Herben
+	<a name=ochrana></a> 		
+		<p>&nbsp;</p>							
+<h2>Ochranářská biologie</h2><br>
+<li>management přírodovědecky cenných území (kosení, pastva a i poněkud drsnější techniky) a jeho vliv na biodiverzitu, návrhy managementových opatření v chráněných územích, možnosti obnovy stanovišť suchých trávníků v CHKO Český Kras</li>
+<li>cílená ochrana vzácných druhů (o většině z nich nevíme téměř nic): znalost jejich populační biologie a genetiky jako předpoklad pro úspěšnou ochranu, příprava záchranných programů druhů</li>
+<li>genetická diversita a fitness vzácných a ohrožených druhů rostlin, genový tok mezi populacemi a nebezpečí inbrední a outbrední deprese</li>
+<li>kolonizace nových stanovišť (bývalé lomy, opuštěná pole) vzácnými a ohroženými druhů rostlin</li>
+<li>biologické podklady pro ochranu vzácných druhů pomocí ex-situ populací (botanické zahrady, zahrádkáři) </li>
+<li>endemický druh kuřička Smejkalova (Minuartia smejkalii; na hadcích u Želivky) jako vlajkový druh: Význam inbrední a outbrední deprese pro přežití jejích populací, faktory určující dynamiku jejích populací, projekty na posílení jejích populací, ex-situ ochrana </li>
+<p></p>
+Aktuální náměty možných prací bakalářských/diplomových/disertačních prací: viz SIS <br>
+Kontakt: Zuzana Münzbergová, Jana Knappová, Zdeněk Janovský, Tomáš Dostálek
+	<a name=historie></a> 		
+		<p>&nbsp;</p>							
+<h2>Historie a dynamika vegetace a krajiny</h2><br>
+<li>sukcese vegetace a uchycování druhů přirozených stanovišť na nově vzniklých stanovištích (bývalé lomy, pískovny, pole, říční náplavy)</li>
+<li>změna druhové skladby vegetace v průběhu posledních desítek let - srovnání starých a recentních vegetačních záznamů (např. České Středohoří, Křivoklátské pleše, ...)  </li>
+<li>vztah dnešní vegetace k struktuře krajiny v minulosti, vliv hospodaření dnes a v minulosti - využití paleoekologických dat, starých leteckých snímků, historických map, archivních záznamů, vzájemné působení současné a historických faktorů pro složení vegetace (např. suchých trávníků)</li>
+<li>vegetace a její dynamika na postindustriálních a postsídelních stanovištích</li>
+<li>vegetačně fytocenologické studie, změny vegetace na širších stanovištních gradientech</li>
+<li>funkční vlastnosti druhů jako určující faktor úspěchu druhů v minulosti – a co z toho poznáme v dnešní krajině? </li>
+<p></p>
+Aktuální náměty možných prací bakalářských/diplomových/disertačních prací: viz SIS <br>
+Kontakt: Jan Novák, Adéla Pokorná, Zuzana Münzbergová
+	<a name=clovek></a> 		
+		<p>&nbsp;</p>							
+<h2>Rostliny a člověk ve víru staletí</h2><br>
+<li>Jak migrovaly druhy v souvislosti s pravěkými kulturami a co můžeme říct o jejich invazivitě? Domestikace druhů jako evoluční proces.</li>
+<li>Kde leží počátek antropocénu?</li>
+<li>Archeobotanika: využití nálezů rostlinných zbytků z archeologických kontextů (makrozbytky, uhlíky, fytolity, pyl), jejich botanická identifikace a interpretace ve spolupráci s archeology (práce v terénu i u mikroskopu).</li>
+<p></p>
+Aktuální náměty možných prací bakalářských/diplomových/disertačních prací: viz SIS <br>
+Kontakt: Adéla Pokorná, Jan Novák
+	<a name=ekosystemy></a> 		
+		<p>&nbsp;</p>							
+<h2>Fungování ekosystémů s globální změnou</h2><br>
+<li>Experimentální paleoekologie – jak se mění např. velikost a tvar buněk (fytolity) nebo produkce pylu v závislosti na změnách prostředí. Jak můžeme tyto informace využít pro rekonstrukci minulosti?</li>
+<li>Jak ovlivňují změny klimatu fungování společenstev, např. jejich disturbanční režim, a biodiverzitu. Jaké změny můžeme predikovat v budoucnu?</li>
+<li>Jak probíhají invaze (migrace) a lokální extinkce na dlouhých časových škálách?</li>
+<li>Měření v terénu, práce s velkým množstvím dat, využití analýz rostlinných zbytků (pyl, makrozbytky, uhlíky) ale i dat z příbuzných oborů (geochemie, letokruhy, biomarkery, DNA), modelování.</li>
+<p></p>
+Aktuální náměty možných prací bakalářských/diplomových/disertačních prací: viz SIS <br>
+Kontakt: Petr Kuneš, Vojtěch Abraham, Alice Moravcová, Kristýna Hošková
+	<a name=struktura></a> 		
+		<p>&nbsp;</p>							
+<h2>Struktura a historie krajiny na škále od lokality po kontinent</h2><br>
+<li>Změna společenstev a jejich složení v čase v důsledku velkých činitelů jako je klima</li>
+<li>Jaké ekosystémy a druhy jsou v přírodě původní a co je přirozené? Co má hodnotu k ochraně?</li>
+<li>Původ a historie nelesních biotopů ve středoevropské krajině, vliv land-use.</li>
+<li>Terénní práce při vyhledávání a odběru sedimentárních záznamů, důraz na znalost (interdisciplinární) krajiny, využití analýz pylu, makrozbytků, uhlíků, mikroskopování a interpretace získaných výsledků.</li>
+<p></p>
+Aktuální náměty možných prací bakalářských/diplomových/disertačních prací: viz SIS<br>
+Kontakt: Vojtěch Abraham, Jan Novák, Petr Kuneš, Adéla Pokorná
+					
+							<p>&nbsp;</p>							
+					
+					
+					
+					
+					</div>
+				</section>
+			</div>
+	
+	
+							<a name=zivot></a> 
+				<div class="wrapper style4">
+				<section class="container">
+									<header class="major">
+								<h2>Život na oddělení</h2>			
+						
+	
+											</header>
+</section>
+</div>
 
 
 
+															<p>&nbsp;</p>														<p>&nbsp;</p>														<p>&nbsp;</p>												<p>&nbsp;</p>									
+	
+											</header>
+</section>
+</div>
 
-			<div class="title">
-				<h2>Život na oddělení</h2>
-</div>	
-		<a name=odkazy></a> 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-		<a name=odkazy></a> 
-		<div class="title">
-				<h2>Odkazy</h2>
- <p><b>Alma mater</b></p>
+
+		<!-- Team -->
+				<a name=lide></a> 
+			<div class="wrapper style5">
+				<section id="team" class="container">
+					<header class="major">
+						<h1></h1>
+						<span class="byline"></span>
+						
+					<h2>Lidé na oddělení</h2>	
+
+					</header>
+					<h2 align="center">Zaměstanci</h2>		<p>&nbsp;</p>				
+					<div class="row">
+
+
+						<div class="3u">
+							<a href="#" class="image"><img src="images/th2.jpg" style=width:180px;height:180px alt=""></a>
+
+							<h3>Tomáš Herben</h3>
+							<p>vedoucí oddělení</p>
+						<p> 2. patro (č. dv. 86)</p>
+							<p> mechanismy interakce mezi jedinci a druhy, matematické modelování, časoprostorová a genetická struktura společenstev klonálních rostlin, dynamika vegetace, statistická analýza </p>
+				         <p>&#104;&#101;&#114;&#098;&#101;&#110;&#064;&#115;&#105;&#116;&#101;&#046;&#099;&#097;&#115;&#046;&#099;&#122;</p>			
+           					</div>
+												
+						<div class="3u">
+							<a href="#" class="image"><img src="images/ps.jpg"style=width:180px;height:180px alt=""></a>
+							<h3>Petr Sklenář</h3>
+							<p>zástupce vedoucího oddělení</p>
+							<p>přízemí (č. dv. 29)</p>
+							<p>geobotanika a ekologie rostlin, flora a vegetace páramos Jižní a Střední Ameriky, fytogeografie vysokých And, taxonomie Caryophyllaceae a Asteraceae páramos (subalpínský st.) </p>
+					      <p>&#112;&#101;&#116;&#114;&#064;&#110;&#097;&#116;&#117;&#114;&#046;&#099;&#117;&#110;&#105;&#046;&#099;&#122;</p>
+						</div>
+						
+                    <div class="3u">
+							<a href="#" class="image"><img src="images/zj.jpg"style=width:180px;height:180px alt=""></a>
+							<h3>Zdeněk Janovský</h3>
+							<p>zaměstnanec</p>
+							<p>2. patro (č. dv. 86)</p>
+							<p>opylovači a jejich funkce v lučních ekosystémech  </p>
+							<p>&#122;&#100;&#101;&#110;&#101;&#107;&#106;&#097;&#110;&#111;&#118;&#115;&#107;&#121;&#064;&#115;&#101;&#122;&#110;&#097;&#109;&#046;&#099;&#122;</p>
+						</div>						
+						
+						<div class="3u">
+							<a href="#" class="image"><img src="images/tk.jpg" style=width:180px;height:180px alt=""></a>
+							<h3>Tomáš Koubek</h3>
+							<p>zaměstnanec</p>
+							<p>2. patro (č. dv. 86)</p>
+							<p> populace rostlin a houbové choroby, klonální rostliny, evoluce klonality pod vlivem chorob, plasticita rostlin, klíčení lučních rostlin, mangrovy</p>
+							<p>&#116;&#111;&#109;&#097;&#115;&#046;&#107;&#111;&#117;&#098;&#101;&#107;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</p>					
+						</div>
+						</div>
+						<div>
+
+					</div>		
+					<div class="row">
+	
+		<div class="3u">
+							<a href="#" class="image"><img src="images/pk.jpg" style=width:180px;height:180px alt=""></a>
+
+							<h3>Pavel Kovář</h3>
+							<p>zaměstnanec</p>
+						<p>2. patro (č. dv. 87)</p>
+							<p> ekologie extrémů – sukcese a kolonizace (průmyslové deponie, sopečné substráty v tropech, disturbance po povodních), interakce mravenci-rostliny-krajina, ekologie obnovy  </p>
+				         <p>&#107;&#111;&#118;&#097;&#114;&#064;&#110;&#097;&#116;&#117;&#114;&#046;&#099;&#117;&#110;&#105;&#046;&#099;&#122;</p>			
+           					</div>
+						<div class="3u">
+							<a href="https://petr.kunes.net/" class="image"><img src="images/pk2.jpg"  style=width:180px;height:180px alt=""></a>
+							<h3>Petr Kuneš</h3>
+							<p>zaměstnanec</p>
+						<p>3. mezipatro (č. dv. 106)</p>
+							<p>paleoekologie a vývoj vegetace pleistocénu a holocénu, studium interglaciálů, lidský vliv, numerické metody v paleoekologii, pylová analýza, vztah pylového spadu a vegetace, kvantitativní rekonstrukce vegetace </p>
+					<p></p>
+						</div>
+						<div class="3u">
+							<a href="#" class="image"><img src="images/BL.JPG" style=width:180px;height:180px alt=""></a>
+							<h3>Barbora Lepková</h3>
+							<p>zaměstnanec</p>
+							<p>přízemí (č. dv. 28)</p>
+							<p>zoochorie u velkých kopytníků, péče o laboratoř geobotaniky</p>
+							<p></p>
+						</div>
+						<div class="3u">
+							<a href="#" class="image"><img src="images/zm.jpg" style=width:180px;height:180px alt=""></a>
+							<h3>Zuzana Münzbergová</h3>
+							<p>zaměstnanec</p>							
+							<p>1. mezipatro (č. dv. 58)</p>
+							<p>populační biologie a genetika, dynamika druhů v krajině, ochranářská biologie, interakce rostlin a herbivorů (od hmyzu po ovce), vzácné a invazní druhy rostlin </p>
+							<p></p>
+						</div>						
+						</div>
+						<h3 align="center"></h3>		<p>&nbsp;</p>				
+					<div class="row">
+
+
+					
+								<div class="3u">
+							<a href="#" class="image"><img src="images/va.jpg" style=width:180px;height:180px alt=""></a>
+							<h3>Vojtěch Abraham</h3>
+							<p>zaměstnanec</p>							
+							<p> místnost: 3. mezipatro (č. dv. 106)</p>
+							<p>paleoekologie kvartéru, pylové mapy a produkce </p>
+							<p></p>
+						</div>
+										
+						<div class="3u">
+							<a href="#" class="image"><img src="images/TD.jpg"style=width:180px;height:180px alt=""></a>
+							<h3>Tomáš Dostálek</h3>
+							<p> místnost: 1. mezipatro (č. dv. 58)</p>
+							<p>populační biologie, genetická diverzita, vzácné (a invazní) druhy rostlin </p>
+							<p>&#116;&#111;&#109;&#097;&#115;&#046;&#100;&#111;&#115;&#116;&#097;&#108;&#101;&#107;&#064;&#110;&#097;&#116;&#117;&#114;&#046;&#099;&#117;&#110;&#105;&#046;&#099;&#122;</p>
+						</div>
+						
+                    <div class="3u">
+							<a href="#" class="image"><img src="images/mw.jpg"style=width:180px;height:180px alt=""></a>
+							<h3>Martin Weiser</h3>
+							<p>zaměstnanec</p>
+							<p> místnost: přízemí (č. dv. 23)</p>
+							<p>kompetice nad zemí i pod zemí, plasticita rostlin</p>
+							<p>&#119;&#101;&#105;&#115;&#101;&#114;&#050;&#064;&#110;&#097;&#116;&#117;&#114;&#046;&#099;&#117;&#110;&#105;&#046;&#099;&#122;</p>
+						</div>						
+						
+					
+						</div>
+						<div>
+
+					</div>		
+
+	
+<p>&nbsp;</p>		
+											<h2 align="center">Doktorandi</h2>		<p>&nbsp;</p>				
+																<div class="row">
+												<div class="3u">
+
+	
+							<a href="#" class="image"><img src="images/am.jpg" style=width:180px;height:180px alt=""></a>
+							<h3>Alice Moravcová</h3>
+                  <p>1. mezipatro, místnost č. 57</p>												
+							<p>Rekonstrukce disturbanční dynamiky horských lesů a jezerních ekosystémů od konce poslední doby ledové s využitím multiproxy-přístupu (rostlinné  makrozbytky, pyl, uhlíky).</p>
+                  <p>&#097;&#108;&#105;&#109;&#111;&#114;&#064;&#099;&#101;&#110;&#116;&#114;&#117;&#109;&#046;&#099;&#122;</p>					
+						</div>
+						<div class="3u">
+							<a href="#" class="image"><img src="images/vk.jpg" style=width:180px;height:180px alt=""></a>
+							<h3>Veronika Kolaříková</h3>
+							<p>čajovna</p>
+							<p>Ekofyziologické traity rostlin a jejich role v reakci na klimatické změny. </p>
+							<p>Ecophysiological traits of plant species and their role in reaction to climate change.</p>
+							<p>&#111;&#114;&#105;&#111;&#110;&#107;&#097;&#064;&#115;&#101;&#122;&#110;&#097;&#109;&#046;&#099;&#122;</p>
+						</div>
+			<div class="3u">
+							<a href="#" class="image"><img src="images/ts.JPG" style=width:180px;height:180px alt=""></a>
+							<h3>Terezie Šimáková</h3>
+							<p>brabazid, v Průhonicích Oddělení populační ekologie (místnost 102) </p>
+							<p>Populační biologie, Rozšíření druhů (momentálně Anthoxanthum sp.) </p>
+							<p>Population biology, Species distribution (currently Anhoxanthum sp.)</p>
+							<p>&#116;&#101;&#114;&#101;&#122;&#105;&#101;&#046;&#110;&#111;&#118;&#097;&#107;&#111;&#118;&#097;&#064;&#115;&#101;&#122;&#110;&#097;&#109;&#046;&#099;&#122;</p>
+						</div>
+						
+							<div class="3u">
+							<a href="#" class="image"><img src="images/ek.jpg" style=width:180px;height:180px alt=""></a>
+							<h3>Eliška Kuťáková</h3>
+							<p>čajovna</p>
+							<p>zpětnovazebné procesy mezi rostlinami a půdou; sukcese</p>
+							<p>plant-soil feedbacks; vegetation succession</p>
+							<p>&#107;&#117;&#116;&#097;&#107;&#111;&#118;&#097;&#046;&#101;&#108;&#105;&#115;&#107;&#097;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</p>
+						</div>
+						</div>
+															<div class="row">
+												<div class="3u">
+
+	
+							<a href="#" class="image"><img src="images/pk.JPG" style=width:180px;height:180px alt=""></a>
+							<h3>Pavlína Knobová</h3>
+                  <p>čajovna</p>												
+							<p>ekologie rostlin pod zemí, interakce rostlin a hub, získávání živin kořeny a jejich růst v podzemí</p>
+							<p>belowground plant ecology, interaction of plants and fungi, root foraging of plants</p>               
+                  <p>&#097;&#108;&#105;&#109;&#111;&#114;&#064;&#099;&#101;&#110;&#116;&#114;&#117;&#109;&#046;&#099;&#122;</p>					
+						</div>
+						<div class="3u">
+							<a href="#" class="image"><img src="images/ave.JPG" style=width:180px;height:180px alt=""></a>
+							<h3>Anna Šolcová</h3>
+							<p>Rudolphova laboratoř pro paleoekologii</p>
+							<p>paleoekologie kvartéru, makrozbytková analýza, dlouhodobá sukcese vegetace</p>
+							<p>Quaternary palaeoecology, macrofossil analysis, long-term vegetation succession</p>
+							<p>&#097;&#110;&#110;&#097;&#112;&#111;&#116;&#117;&#099;&#107;&#111;&#118;&#097;&#054;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</p>
+						</div>
+			<div class="3u">
+							<a href="#" class="image"><img src="images/ak.JPG" style=width:180px;height:180px alt=""></a>
+							<h3>Adam Klimeš</h3>
+							<p> </p>
+							<p>biostatistika, fylogenetické komparativní modely, evoluce bylinnosti, Bayesovská statistika, ekologické rozdíly mezi bylinami a dřevinami</p>
+							<p>biostatistics, phylogenetic comparative models, evolution of herbaceous habit, Bayesian statistics, ecological differences between herbs and woody plants</p>
+							<p>&#107;&#108;&#105;&#109;&#101;&#115;&#097;&#064;&#110;&#097;&#116;&#117;&#114;&#046;&#099;&#117;&#110;&#105;&#046;&#099;&#122;</p>
+						</div>
+						
+							<div class="3u">
+							<a href="#" class="image"><img src="images/eh.jpg" style=width:180px;height:180px alt=""></a>
+							<h3>Eva Hořčičková</h3>
+							<p>Místnost 67</p>
+							<p>Působení volně žíjících velkých býložravců na vegetaci a krajinu.</p>
+							<p>Effect of free-ranging large herbivores on vegetation and landscape.</p>
+							<p>&#101;&#046;&#104;&#111;&#114;&#099;&#105;&#099;&#107;&#111;&#118;&#097;&#064;&#099;&#101;&#110;&#116;&#114;&#117;&#109;&#046;&#099;&#122;</p>
+						</div>
+						</div>
+											
+											
+																<div class="row">
+												<div class="3u">
+
+	
+							<a href="#" class="image"><img src="images/tm.JPG" style=width:180px;height:180px alt=""></a>
+							<h3>Tereza Mašková</h3>
+                  <p>dvěře č. 23</p>												
+							<p>klíčení semen a vývoj semenáčů, živinová stechiometrie, vývoj kořenových systémů, časová dynamika</p>
+						<p>seed germination and seedling development, nutrient stoichiometry, root system development, time dynamics</p>                  
+                  <p>&#116;&#101;&#114;&#101;&#122;&#097;&#112;&#101;&#099;&#104;&#111;&#118;&#097;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</p>					
+						</div>
+						<div class="3u">
+							<a href="#" class="image"><img src="images/kk.jpg" style=width:180px;height:180px alt=""></a>
+							<h3>Klára Koupilová</h3>
+							<p> přízemí (č. dv. 28)</p>
+							<p>interakce rostlin s houbovými patogeny, role opylovačů jako přenašečů nemocí rostlin</p>
+							<p>host-pathogen interactions (fungal pathogens of plants), pollinators as vectors of plant diseases</p>
+							<p>&#107;&#111;&#117;&#112;&#105;&#108;&#111;&#118;&#097;&#046;&#107;&#108;&#097;&#114;&#097;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</p>
+						</div>
+						<div class="3u">
+							<a href="#" class="image"><img src="images/bobek_paleolab_foto.jpg" style=width:180px;height:180px alt=""></a>
+							<h3>Přemysl Bobek</h3>
+							<p>paleoekologická laboratoř, Botanický ústav AV ČR</p>
+							<p>vliv požárových disturbancí na dlouhodobý vývoj lesních ekosystémů, detekce požárem indukovaných vegetačních změn a hledání faktorů ovlivňujících požárovou dynamiku v průběhu Holocénu</p>
+							<p>long-term fire disturbance dynamics in forest ecosystems, detection of fire-induced vegetation changes and identification of driving forces on the past fire regimes.</p>							
+							<p>&#112;&#114;&#101;&#109;&#121;&#115;&#108;&#046;&#098;&#111;&#098;&#101;&#107;&#064;&#105;&#098;&#111;&#116;&#046;&#099;&#097;&#115;&#046;&#099;&#122;</p>
+						</div>
+						<div class="3u">
+							<a href="#" class="image"><img src="images/portret02.jpg" style=width:180px;height:180px alt=""></a>
+							<h3>Anna Tichá</h3>
+							<p>místnost č. 97, 2. patro</p>
+							<p>paleolimnologie, paleoekologie sladkovodních ekosystémů, kvantitativní paleorekonstrukce podmínek na základě rozsivkových společenstev</p>
+							<p>paleolimnology, paleoecology of freshwater ecosystems, quantitative environmental paleoreconstruction based on diatom assemblages</p>
+							<p>&#097;&#046;&#112;&#111;&#115;&#116;&#111;&#108;&#107;&#097;&#064;&#115;&#101;&#122;&#110;&#097;&#109;&#046;&#099;&#122;</p>
+						</div>				
+						</div>						
+						
+																											<div class="row">
+												<div class="3u">
+
+	
+							<a href="#" class="image"><img src="images/placeholder.png" style=width:180px;height:180px alt=""></a>
+							<h3>Kristýna Hošková</h3>
+                  <p>1. mezipatro, místnost č. 57</p>												
+							<p></p>
+                  <p>&#107;&#114;&#105;&#115;&#116;&#121;&#110;&#097;&#095;&#107;&#117;&#110;&#099;&#111;&#118;&#097;&#064;&#115;&#101;&#122;&#110;&#097;&#109;&#046;&#099;&#122;</p>					
+						</div>
+						<div class="3u">
+							<a href="#" class="image"><img src="images/placeholder.png" style=width:180px;height:180px alt=""></a>
+							<h3>Martin Macek</h3>
+							<p></p>
+							<p>&#109;&#097;&#114;&#116;&#105;&#110;&#046;&#109;&#097;&#099;&#101;&#107;&#064;&#118;&#111;&#108;&#110;&#121;&#046;&#099;&#122;</p>
+						</div>
+						<div class="3u">
+							<a href="#" class="image"><img src="images/placeholder.png" style=width:180px;height:180px alt=""></a>
+							<h3>Jana Beranová</h3>
+							<p></p>
+							<p>&#106;&#110;&#098;&#114;&#110;&#118;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</p>
+						</div>
+						<div class="3u">
+							<a href="#" class="image"><img src="images/placeholder.png" style=width:180px;height:180px alt=""></a>
+							<h3>Jindřich Prach</h3>
+							<p></p>
+							<p>&#106;&#105;&#110;&#100;&#114;&#097;&#112;&#114;&#097;&#099;&#104;&#064;&#115;&#101;&#122;&#110;&#097;&#109;&#046;&#099;&#122;</p>
+						</div>				
+			
+						</div>					
+											
+																				<div class="row">
+												<div class="3u">
+
+	
+
+							<h3>Zuzana Líblová</h3>
+                  <p></p>												
+							<p></p>
+                  <p>&#122;&#117;&#122;&#097;&#110;&#097;&#046;&#108;&#105;&#098;&#108;&#111;&#118;&#097;&#064;&#110;&#097;&#116;&#117;&#114;&#046;&#099;&#117;&#110;&#105;&#046;&#099;&#122;</p>					
+						</div>
+						<div class="3u">
+
+							<h3>Anna Aldorfová</h3>
+							<p></p>
+							<p>&#097;&#110;&#099;&#097;&#102;&#108;&#111;&#114;&#105;&#097;&#110;&#111;&#118;&#097;&#064;&#099;&#101;&#110;&#116;&#114;&#117;&#109;&#046;&#099;&#122;</p>
+						</div>
+						<div class="3u">
+
+							<h3>Andrea Veselá</h3>
+							<p></p>
+							<p>&#097;&#110;&#100;&#114;&#101;&#097;&#046;&#112;&#097;&#117;&#108;&#117;&#064;&#115;&#101;&#122;&#110;&#097;&#109;&#046;&#099;&#122;</p>
+						</div>
+						<div class="3u">
+
+							<h3>Tomáš Vlasta</h3>
+							<p>čajovna</p>
+							<p>populační biologie a genetika vzácných druhů české květeny</p>
+							<p>population biology and genetics of rare species of Czech flora</p>
+							<p>&#116;&#111;&#109;&#097;&#115;&#046;&#118;&#108;&#097;&#115;&#116;&#097;&#064;&#101;&#109;&#097;&#105;&#108;&#046;&#099;&#122;</p>
+						</div>				
+			
+						</div>								
+						
+							<div class="row">
+												<div class="3u">
+
+	
+
+							<h3>Anna Kladivová</h3>
+                  <p></p>												
+							<p></p>
+                  <p>&#107;&#097;&#102;&#101;&#115;&#101;&#122;&#109;&#114;&#122;&#108;&#105;&#110;&#111;&#117;&#064;&#115;&#101;&#122;&#110;&#097;&#109;&#046;&#099;&#122;</p>					
+						</div>
+						<div class="3u">
+
+							<h3>Mária Šurinová</h3>
+							<p></p>
+							<p>&#115;&#117;&#114;&#105;&#110;&#111;&#118;&#097;&#064;&#115;&#101;&#122;&#110;&#097;&#109;&#046;&#099;&#122;</p>
+						</div>
+						<div class="3u">
+
+							<h3>Martina Horáčková</h3>
+							<p></p>
+							<p>&#101;&#115;&#107;&#101;&#108;&#097;&#064;&#112;&#111;&#115;&#116;&#046;&#099;&#122;</p>
+						</div>
+						<div class="3u">
+
+							<h3>Jana Duchoslavová</h3>
+							<p></p>
+							<p></p>
+							<p></p>
+							<p>&#118;&#105;&#110;&#115;&#111;&#118;&#097;&#106;&#064;&#110;&#097;&#116;&#117;&#114;&#046;&#099;&#117;&#110;&#105;&#046;&#099;&#122;</p>
+						</div>				
+			
+						</div>		
+						
+						<div class="row">
+												<div class="3u">
+
+	
+
+							<h3>Pavla Žáčková</h3>
+                  <p></p>												
+							<p></p>
+                  <p>&#112;&#097;&#046;&#122;&#097;&#099;&#107;&#111;&#118;&#097;&#064;&#115;&#101;&#122;&#110;&#097;&#109;&#046;&#099;&#122;</p>					
+						</div>
+
+													</div>
+											
+											<h2 align="center">Magisterští studenti</h2>		<p>&nbsp;</p>	
+											
+											
+																											<div class="row">
+												<div class="3u">
+
+	
+							<a href="#" class="image"><img src="images/vh.jpg" style=width:180px;height:180px alt=""></a>
+							<h3>Věra Hanzelková</h3>
+                  <p>velká pracovna, číslo dveří 28</p>												
+							<p> interakce mezi rostlinami a půdou</p>
+							<p>Plant-soil feedback</p>
+                  <p>&#118;&#101;&#114;&#097;&#104;&#097;&#110;&#122;&#101;&#108;&#107;&#111;&#118;&#097;&#064;&#115;&#101;&#122;&#110;&#097;&#109;&#046;&#099;&#122;</p>					
+						</div>
+						<div class="3u">
+							<a href="#" class="image"><img src="images/ld.jpg" style=width:180px;height:180px alt=""></a>
+							<h3>Lucie Drtinová</h3>
+                  <p>velká pracovna, číslo dveří 28</p>												
+							<p>zpětná vazba mezi rostlinou a půdou, rostlinné invaze</p>
+							<p>Plant-soil feedback</p>
+							<p>&#108;&#117;&#099;&#105;&#101;&#046;&#100;&#114;&#116;&#105;&#110;&#111;&#118;&#097;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</p>
+						</div>
+						<div class="3u">
+							<a href="#" class="image"><img src="images/jv.jpg" style=width:180px;height:180px alt=""></a>
+							<h3>Jiří Vaníček</h3>
+							<p>velká pracovna, číslo dveří 28</p>
+							<p>ekologie rostlinných chorob v přírodních ekosystémech, vegetace evropských lesů</p>
+							<p>Ecology of plant diseases in natural ecosystems, European forest vegetation </p>
+							<p>&#106;&#105;&#114;&#046;&#118;&#097;&#110;&#105;&#099;&#101;&#107;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</p>
+						</div>
+						<div class="3u">
+							<a href="#" class="image"><img src="images/to.jpg" style=width:180px;height:180px alt=""></a>
+							<h3>Tereza Opravilová</h3>
+							<p>velká pracovna, číslo dveří 28</p>
+							<p>zpětnovazebné interakce mezi rostlinou a půdou, rekultivace lomů</p>
+							<p>Plant-soil feedback, reclamation of quarries</p>
+							<p>&#116;&#101;&#114;&#099;&#097;&#046;&#111;&#112;&#064;&#115;&#101;&#122;&#110;&#097;&#109;&#046;&#099;&#122;</p>
+						</div>				
+			
+						</div>
+																					
+																											<div class="row">
+												<div class="3u">
+
+	
+							<a href="#" class="image"><img src="images/av.JPG" style=width:180px;height:180px alt=""></a>
+							<h3>Anna Větvičková</h3>
+                  <p>velká pracovna, číslo dveří 28</p>												
+							<p>populační biologie rostlin, interakce rostlin a herbivorů, invazní rostliny</p>
+							<p>plant population biology, plant-herbivore interaction, plant invasions</p>
+                  <p>&#097;&#098;&#097;&#114;&#098;&#117;&#115;&#064;&#115;&#101;&#122;&#110;&#097;&#109;&#046;&#099;&#122;</p>					
+						</div>
+						<div class="3u">
+							<a href="#" class="image"><img src="images/ah.jpg" style=width:180px;height:180px alt=""></a>
+							<h3>Adam Hrouda</h3>
+                  <p>velká pracovna, číslo dveří 28</p>												
+							<p>architektura a funkce podzemních orgánů, "psychologie rostlin" ve vztahu k půdní heterogenitě živin</p>
+							<p>architecture and role of underground organs, "plant psychology" in relation to soil nutrient heterogeneity</p>
+							<p>&#097;&#100;&#097;&#109;&#104;&#114;&#111;&#117;&#100;&#097;&#064;&#115;&#101;&#122;&#110;&#097;&#109;&#046;&#099;&#122;</p>
+						</div>
+						<div class="3u">
+							<a href="#" class="image"><img src="images/js.jpg" style=width:180px;height:180px alt=""></a>
+							<h3>Jakub Štenc</h3>
+							<p>velká pracovna, číslo dveří 28</p>
+							<p>ekologie opylování, vliv prostorového uspořádání rostlin na přenos pylu</p>
+							<p>pollination ecology, influence of spatial distribution of plants on pollen transfer</p>
+							<p>&#106;&#097;&#107;&#117;&#098;&#115;&#116;&#101;&#110;&#099;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</p>
+						</div>
+						<div class="3u">
+							<a href="#" class="image"><img src="images/to.jpg" style=width:180px;height:180px alt=""></a>
+							<h3>Tereza Opravilová</h3>
+							<p>velká pracovna, číslo dveří 28</p>
+							<p>zpětnovazebné interakce mezi rostlinou a půdou, rekultivace lomů</p>
+							<p>Plant-soil feedback, reclamation of quarries</p>
+							<p>&#116;&#101;&#114;&#099;&#097;&#046;&#111;&#112;&#064;&#115;&#101;&#122;&#110;&#097;&#109;&#046;&#099;&#122;</p>
+						</div>				
+			
+						</div>	
+						<div class="row">
+												<div class="3u">
+
+	
+
+							<h3>Martin Prach</h3>
+                  <p></p>												
+							<p></p>
+                  <p>&#109;&#097;&#114;&#116;&#105;&#110;&#112;&#114;&#097;&#099;&#104;&#064;&#115;&#101;&#122;&#110;&#097;&#109;&#046;&#099;&#122;</p>					
+						</div>
+						<div class="3u">
+
+							<h3>Karolína Pánková</h3>
+							<p></p>
+							<p>&#112;&#097;&#110;&#107;&#111;&#118;&#107;&#050;&#064;&#110;&#097;&#116;&#117;&#114;&#046;&#099;&#117;&#110;&#105;&#046;&#099;&#122;</p>
+						</div>
+						<div class="3u">
+
+							<h3>Lucie Poislová</h3>
+							<p></p>
+							<p>&#076;&#117;&#099;&#105;&#101;&#046;&#080;&#111;&#106;&#115;&#108;&#111;&#118;&#097;&#064;&#101;&#109;&#097;&#105;&#108;&#046;&#099;&#122;</p>
+						</div>
+						<div class="3u">
+
+							<h3>Pavel Suk</h3>
+							<p></p>
+							<p></p>
+							<p></p>
+							<p>&#112;&#097;&#118;&#101;&#108;&#046;&#115;&#117;&#107;&#064;&#110;&#097;&#116;&#117;&#114;&#046;&#099;&#117;&#110;&#105;&#046;&#099;&#122;</p>
+						</div>				
+			
+						</div>		
+												<div class="row">
+												<div class="3u">
+
+	
+
+							<h3>Mariana Černá</h3>
+                  <p></p>												
+							<p></p>
+                  <p>&#109;&#097;&#114;&#105;&#097;&#110;&#097;&#046;&#115;&#121;&#107;&#111;&#114;&#111;&#118;&#097;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</p>					
+						</div>
+						<div class="3u">
+
+							<h3>Barbora Hubáčková</h3>
+							<p></p>
+							<p>&#104;&#117;&#098;&#097;&#099;&#107;&#111;&#118;&#097;&#098;&#097;&#114;&#098;&#111;&#114;&#097;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</p>
+						</div>
+						<div class="3u">			
+						</div>		
+						</div>
+						
+						<p>&nbsp;</p>		
+						
+											
+											<h2 align="center">Bakalářští studenti</h2>		<p>&nbsp;</p>			
+																									
+																											<div class="row">
+												<div class="3u">
+
+	
+							<a href="#" class="image"><img src="images/mn.jpg" style=width:180px;height:180px alt=""></a>
+							<h3>Matyáš Nekola</h3>
+                  <p></p>												
+							<p>Květní ekologie rostlin v horském prostředí</p>
+							<p></p>
+                  <p>&#109;&#097;&#116;&#109;&#097;&#116;&#049;&#051;&#050;&#054;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</p>					
+						</div>
+						<div class="3u">
+
+							<h3>Marek Kasner</h3>
+							<p></p>
+							<p>&#109;&#046;&#107;&#097;&#115;&#110;&#101;&#114;&#064;&#101;&#109;&#097;&#105;&#108;&#046;&#099;&#122;</p>
+						</div>
+						<div class="3u">
+
+							<h3>Jakub Hradečný</h3>
+							<p></p>
+							<p>&#106;&#097;&#107;&#117;&#098;&#046;&#104;&#114;&#097;&#100;&#101;&#099;&#110;&#121;&#064;&#110;&#097;&#116;&#117;&#114;&#046;&#099;&#117;&#110;&#105;&#046;&#099;&#122;</p>
+						</div>
+						<div class="3u">
+
+							<h3>Karolína Hrušková</h3>
+							<p>&#104;&#114;&#117;&#115;&#116;&#105;&#099;&#107;&#097;&#046;&#107;&#064;&#115;&#101;&#122;&#110;&#097;&#109;&#046;&#099;&#122;</p>
+						</div>				
+			
+						</div>
+
+					
+						<div class="row">
+												<div class="3u">
+
+	
+
+							<h3>Hana Veljačíková</h3>
+                  <p></p>												
+							<p></p>
+							<p></p>
+                  <p>&#104;&#097;&#110;&#097;&#046;&#118;&#101;&#108;&#106;&#097;&#099;&#105;&#107;&#111;&#118;&#097;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</p>					
+						</div>
+					
+			
+						</div>
+					</div>
+				</section>
+																					   				<a name=odkazy></a> 
+</div>
+
+			</div>
+																										   			
+
+		<!-- Section pro zajemce -->
+			<div class="wrapper style7">
+				<section class="container">
+
+
+							<header class="major">
+
+								<h2>Odkazy</h2>
+								</header>
+
+   <p><b>Alma mater</b></p>
    <p><a href="http://www.cuni.cz">Univerzita Karlova v Praze</a><br>
       <a href="http://natur.cuni.cz">Př&iacute;rodovědeck&aacute; fakulta</a><br>
    </p>
@@ -798,42 +1078,30 @@ Vámi také sepíše zadávací protokol.</li>
 </p>
 <p><br>
 </p>
-				</div>
-				<div id="main">	
+					</section>
+					</div>
 
 
+	<!-- Footer -->
 
+		<div id="footer">
+			<section class="container">
+				<header class="major"  z-index: 2; >
 
-</div>
-<p><br>
-</p>
-
-
-</div>
-<p>&nbsp;</p>
-
+					<span class="byline"></span>
+				</header>
+				
+				<hr />
+			</section>
 
 
 
 			
-	<div>
-		
-<div class="sidenav">
-<div class="title">
-					<h2>Aktuality</h2>
-				
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#clients">Clients</a>
-  <a href="#contact">Contact</a>
-</div>
-		
+			<!-- Copyright -->
+				<div id="copyright">
+					Správce webu: Jakub Štenc 
+				</div>			
 		</div>
-		</div>
-		</div>
-		</div>
-<div id="copyright" class="">
-	<p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
-</div>
-</body>
+
+	</body>
 </html>

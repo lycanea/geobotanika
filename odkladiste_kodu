@@ -1,0 +1,60 @@
+	<h2>Témata</h2>
+						<p></p>
+						
+						
+						
+				<div class=""="read-more-target">
+  <input type="checkbox" class="read-more-state" id="post-1" />
+
+  <p class="read-more-wrap"><b>Populační ekologie rostlin</b><br> 
+  <span class="read-more-target" >
+
+    dynamika rostlinných populací, role jednotlivých složek jejich životního cyklu <br>
+    srovnávací demografie rostlin, jaké jsou klíčové trade-off životních strategií rostlin, jaké charakteristiky své životní strategie mohou rostliny v evoluci měnit snáze a jaké hůře <br>
+    populační biologie invazních rostlin: hledání slabých míst v jejich životním cyklu pro jejich cílený management <br>
+    šíření rostlin v krajině a metapopulační dynamika, jak se rostliny vyrovnávají s měnící se krajinou, význam změn krajiny pro rozšíření druhů i celých společenstev, krajinná dynamika druhů v systému fragmentovaných populací suchých trávníků. Význam dálkového šíření semen pro krajinou dynamiku druhů<br>
+    populační modely klonálních rostlin: jak se vyrovnat s tím, že rostliny nemají jasně definované jedince, takže naše "živočišná" zkušenost nám nepomáhá<br>
+    Populační dynamika cytotypově smíšených populací <br>
+    populační biologie rostlin napadených systemickými patogeny – jaký vliv má patogen na rostlinu na populační úrovni?<br>
+
+Aktuální náměty možných prací bakalářských/diplomových/disertačních prací: viz SIS
+Kontakt: Zuzana Münzbergová, Zdeněk Janovský, Tomáš Dostálek, Tomáš Koubek
+ </span></p>
+	  
+  <label for="post-1" class="read-more-trigger"></label>
+</div>
+
+<div>
+  <input type="checkbox" class="read-more-state" id="post-2" />
+
+  <a class="read-more-wrap"><h4>Populační ekologie rostlin</h4>
+</a> 
+<ul>
+        <li class="read-more-target">lorem 3</li>
+
+  </ul>
+  
+  <label for="post-2" class="read-more-trigger"></label>
+</div>
+
+<div>
+  <input type="checkbox" class="read-more-state" id="post-3" />
+
+  <ul class="read-more-wrap">
+    <li>lorem</li>
+    <li>lorem 2</li>
+    <li class="read-more-target">lorem 3</li>
+    <li class="read-more-target">lorem 4</li>
+  </ul>
+  
+  <label for="post-3" class="read-more-trigger"></label>
+</div>
+
+<p>&nbsp;</p>
+				</section>
+			</div>
+
+
+
+</div>
+		</div>	
