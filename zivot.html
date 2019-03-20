@@ -12,6 +12,12 @@ Geobotanika
 		<meta name="keywords" content="" />
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+.mySlides1, .mySlides2 {display: none}
+img {vertical-align: middle;}
+</style>
 <style>
 #more {display: none;}
 </style>
@@ -68,6 +74,27 @@ function hideElement(element) {
 
 function isVisible(element) {
     return element.className.match(/(?:^|\s)hidden(?!\S)/) === null
+    
+    
+    var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}												
 }</script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
@@ -97,9 +124,9 @@ function isVisible(element) {
 										<a href="temata.html#temata">Témata</a>
 										
 									</li>
-									<li><a href="index.html#lide">Lidé</a></li>
+									<li><a href="lide.html#lide">Lidé</a></li>
 											<li><a href="zivot.html#zivot">Život na oddělení</a></li>
-						         <li class="active"><a href="aktuality.html">Aktuality</a></li>									
+						         <li class="active"><a href="aktuality.html#aktuality">Aktuality</a></li>									
 
 
 
@@ -123,34 +150,116 @@ function isVisible(element) {
 				</div>
 
 			</div>
-
-		<!-- Section One -->
-			<div class="wrapper style3">
+							
+						<div class="wrapper style3">
 
 
 							<header class="major">
 
-								<h2>Aktuality</h2>
+								<h2>Život na oddělení</h2>
 								</header>
-				<section class="container">
-
-     <p>&nbsp;</p>
-      <h3>Nové webové stránky a stránka na facebooku</h3>
-            <p>&nbsp;</p>
-Oddělení geobotaniky má nové stránky. Zároveň byl spuštěň i facebook oddělení, kde budeme sdílet novinky a aktuality. Sledujte nás na tomto odkaze:  
-      <p>&nbsp;</p>
-      <p style="border-bottom: 1px solid black"></p>
+				<section class="container">																   			
 
 
-      <h3>Nové webové stránky a stránka na facebooku</h3>
-            <p>&nbsp;</p>
-Oddělení geobotaniky má nové stránky. Zároveň byl spuštěň i facebook oddělení, kde budeme sdílet novinky a aktuality. Sledujte nás na tomto odkaze:  
-      <p>&nbsp;</p>
-            <p style="border-bottom: 1px solid black"></p>
-					</section>
-			</div>							
-	
-	
+<p>Lužnice 2019</p>
+<div class="slideshow-container">
+  <div class="mySlides1">
+    <img src="images/mensi/1.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides1">
+    <img src="images/mensi/2.jpg" style="width:100%">
+  </div>
+    <div class="mySlides1">
+    <img src="images/mensi/3.jpg" style="width:100%">
+  </div>
+  <div class="mySlides1">
+    <img src="images/mensi/4.jpg" style="width:100%">
+  </div>
+  <div class="mySlides1">
+    <img src="images/mensi/5.jpg" style="width:100%">
+  </div>
+  <div class="mySlides1">
+    <img src="images/mensi/6.jpg" style="width:100%">
+  </div>
+    <div class="mySlides1">
+    <img src="images/mensi/7.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides1">
+    <img src="images/mensi/8.jpg" style="width:100%">
+  </div>
+  <div class="mySlides1">
+    <img src="images/mensi/9.jpg" style="width:100%">
+  </div>
+  <div class="mySlides1">
+    <img src="images/mensi/10.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides1">
+    <img src="images/mensi/11.jpg" style="width:100%">
+  </div>
+  <div class="mySlides1">
+    <img src="images/mensi/12.jpg" style="width:100%">
+  </div>
+  <div class="mySlides1">
+    <img src="images/mensi/13.jpg" style="width:100%">
+  </div>
+  <div class="mySlides1">
+    <img src="images/mensi/14.jpg" style="width:100%">
+  </div>
+  <div class="mySlides1">
+    <img src="images/mensi/15.jpg" style="width:100%">
+  </div>
+
+
+
+
+  <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+</div>
+<p>&nbsp;</p>
+<p>Slideshow 2:</p>      
+<div class="slideshow-container">
+  <div class="mySlides2">
+    <img src="images/placeholder.png" style="width:100%">
+  </div>
+
+  <div class="mySlides2">
+    <img src="images/ked.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides2">
+    <img src="images/placeholder.png" style="width:100%">
+  </div>
+
+  <a class="prev" onclick="plusSlides(-1, 1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1, 1)">&#10095;</a>
+</div>
+
+<script>
+var slideIndex = [1,1];
+var slideId = ["mySlides1", "mySlides2"]
+showSlides(1, 0);
+showSlides(1, 1);
+
+function plusSlides(n, no) {
+  showSlides(slideIndex[no] += n, no);
+}
+
+function showSlides(n, no) {
+  var i;
+  var x = document.getElementsByClassName(slideId[no]);
+  if (n > x.length) {slideIndex[no] = 1}    
+  if (n < 1) {slideIndex[no] = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex[no]-1].style.display = "block";  
+}
+</script>
+</div>
+</section>
 
 	<!-- Footer -->
 
