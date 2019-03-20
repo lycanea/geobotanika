@@ -30,7 +30,7 @@
 
 	body, input, select, textarea {
 		color: #555555;
-		font-family: 'Open Sans', serif;
+		font-family: "Comic Sans MS", cursive, sans-serif;
 		font-size: 12pt;
 		font-weight: 300;
 		line-height: 1.65em;
@@ -931,9 +931,9 @@ position: fixed;
 
   position: absolute;
   top: 700px;
-  right: 30px;
+  right: 10px;
   display: block;
-  width: 700px
+  width: 400px
 }
 
 
@@ -964,21 +964,20 @@ div.content {
   height: 1000px;
 }
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
-@media screen and (max-width: 1500px) {
+@media screen and (max-width: 1600px) {
   .sidebar {
-  width: 400px;
+  width: 300px;
     display: block;
       position: absolute;
   top: 700px;
-  right: 30px;}}
+  right: 10px;}}
   /* On screens that are less than 700px wide, make the sidebar into a topbar */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1450px) {
   .sidebar {
-  width: 350px;
-    display: block;
-      position: absolute;
-  top: 700px;
-  right: 30px;}}
+
+    display: none;}}
+    
+
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 950px) {
   .sidebar {
@@ -994,5 +993,43 @@ div.content {
 display: none;
   }
 }
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  background-color: white;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a grey background color */
+.prev:hover, .next:hover {
+  background-color: white;
+  color: black;
+}
+
+
 
 
