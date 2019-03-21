@@ -317,6 +317,13 @@
 		.icon > .label {
 			display: none;
 		}
+	.pes {
+		display: none;
+		position: fixed;
+		top: 10px;
+		right: 30px;
+	
+	}
 
 /* Lists */
 
@@ -478,74 +485,7 @@
 				color: #fff;
 			}
 
-/* Button */
 
-	input[type="submit"],
-	input[type="reset"],
-	input[type="button"],
-	.button {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-o-appearance: none;
-		-ms-appearance: none;
-		appearance: none;
-		background: none;
-		border-radius: none;
-		border: 2px solid;
-		border-color: #669900;
-		color: #669900;
-		cursor: pointer;
-		display: inline-block;
-		padding: 0.90em 1.2em;
-		letter-spacing: 1px;
-		text-align: center;
-		text-decoration: none;
-		text-transform: none;
-		font-size: 1.4em;
-		-moz-transition: all 0.35s ease-in-out;
-		-webkit-transition: all 0.35s ease-in-out;
-		-o-transition: all 0.35s ease-in-out;
-		-ms-transition: all 0.35s ease-in-out;
-		transition: all 0.35s ease-in-out;
-	}
-
-		input[type="submit"]:hover,
-		input[type="reset"]:hover,
-		input[type="button"]:hover,
-		.button:hover {
-			background: #669900;
-			color: white;
-		}
-
-		input[type="submit"].alt,
-		input[type="reset"].alt,
-		input[type="button"].alt,
-		.button.alt {
-			border-color: inherit;
-			color: inherit;
-		}
-
-			input[type="submit"].alt:hover,
-			input[type="reset"].alt:hover,
-			input[type="button"].alt:hover,
-			.button.alt:hover {
-				background: white;
-				color: #669900;
-			}
-
-		input[type="submit"].fit,
-		input[type="reset"].fit,
-		input[type="button"].fit,
-		.button.fit {
-			width: 100%;
-		}
-
-		input[type="submit"].small,
-		input[type="reset"].small,
-		input[type="button"].small,
-		.button.small {
-			font-size: 0.8em;
-		}
 
 /* Wrapper */
 
