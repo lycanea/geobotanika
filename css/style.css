@@ -1,3 +1,5 @@
+@import url("font-awesome.min.css");
+@import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800");
 
 /*
 	Solarize by TEMPLATED
@@ -276,26 +278,50 @@
     display: none;
       position: absolute;
       }}
-			.motyl {
-			position:absolute;
-			top:4100px;
-			right:50px; }
-						/* On screens that are less than 700px wide, make the sidebar into a topbar */
-@media screen and (max-width: 1550px) {
-  .motyl {
+			.banner2 {
+				width:720px;
+				height:200px;
+				align= "left"}
+				
+				@media screen and (max-width: 950px) {
+        .banner2 {
 
-      position: absolute;
-      right:20px;
+width: 576px;
+	height:160px;
+      }}
+@media screen and (max-width: 850px) {
+        .banner2 {
+
+width: 576px;
+	height:160px;
       }}
       
-    
+      @media screen and (max-width: 700px) {
+        .banner2 {
 
-			/* On screens that are less than 700px wide, make the sidebar into a topbar */
-@media screen and (max-width: 1450px) {
-  .motyl {
-    display: none;
-      position: absolute;
+width: 540px;
+	height:150px;
+      }}
 
+
+@media screen and (max-width: 670px) {
+        .banner2 {
+
+width: 504px;
+	height:140px;
+      }}
+
+
+
+@media screen and (max-width: 570px) {
+        .banner2 {
+
+width: 432px;
+	height:120px;
+      }} 
+         @media screen and (max-width: 500px) {
+        .banner2 {
+display: none;
       }}
 
 /* Icon */
@@ -947,16 +973,16 @@ display: none;
   margin-top: -22px;
   color: white;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
   transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
+  border-radius: 0 0px 0px 0;
   user-select: none;
 }
 
 /* Position the "next button" to the right */
 .next {
   right: 0;
-  border-radius: 3px 0 0 3px;
+  border-radius: 0px 0 0 0px;
 }
 
 /* On hover, add a grey background color */
