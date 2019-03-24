@@ -278,11 +278,21 @@
     display: none;
       position: absolute;
       }}
-			.banner2 {
+		.banner2{{
+			width:720px;
+			height: 200px;
+			float: none;
+			
+			 }}
 				width:720px;
 				height:200px;
 				align= "left"}
-				
+						@media screen and (max-width: 1250px) {
+        .banner2 {
+
+width: 648px;
+	height:180px;
+      }}		
 				@media screen and (max-width: 950px) {
         .banner2 {
 
@@ -321,11 +331,18 @@ width: 432px;
       }} 
       
       
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 470px) {
         .banner2 {
 
 width: 360px;
 	height:100px;
+      }} 
+      
+      @media screen and (max-width: 270px) {
+        .banner2 {
+
+width: 200px;
+	height:55px;
       }} 
          @media screen and (max-width: 10px) {
         .banner2 {
