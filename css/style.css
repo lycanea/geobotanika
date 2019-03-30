@@ -541,9 +541,9 @@ display: none;
 
 		.wrapper.style1 {
 			padding: 0em;
-			background: #222222 url(../images/ked.jpg) no-repeat;
+			background-image: url("/home/meow/Stažené/tem2/images/ked3.jpg");
 			background-size: cover;
-			height: 500px;
+			height: 400px;
 		}
 
 		.wrapper.style2 {
@@ -648,23 +648,51 @@ display: none;
 					border: 10px solid;
 					border-color: grey;;
 				}
-			
+		
+		
+		
+
+
 /* Header */
 
 	#header {
 		color: white;
-		height: 4em;
-		background: rgba(0, 0, 0, 0.7);
+		height: 0em;
+		background: transparent;
 		z-index: 2;
 	}
 
 		#header .container {
 			position: fixed;
-			background: rgba(0, 0, 0, 0.7);
-			height: 4em;
+			background: transparent;
+			height: 0em;
 			width: 100%;
-					z-index: 2;
+			z-index: 2;
 		}
+		 #header .transka2  {
+			position: fixed;		
+		background: black;		
+	    position: absolute;
+	    display: none;
+			width: 100%;
+						height: 0em;
+		top: 0;
+		right: 10em;}
+		
+		
+		/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (min-width: 950px) {
+  .header .transka2 {
+			position: fixed;		
+		background: black;		
+	    position: absolute;
+			width: 100%;
+						height: 0em;
+		top: 0;
+		right: 10em;}
+  }
+
+		
 		#header .pic {
 position: fixed;
 
@@ -676,8 +704,9 @@ position: fixed;
 
 	.homepage #nav {
 		position: static;
-		right: none;
+		right: 30%;
 		text-align: center;
+
 	}
 
 	#logo {
@@ -700,9 +729,19 @@ position: fixed;
 
 	#nav {
 		position: absolute;
+					width: 100%;
 		top: 0;
 		right: 0;
+		background: transparent;
+   	transition: .1s;
 	}
+	.transka #nav {
+	    background: black;	
+	    			width: 100%;	
+	    position: absolute;
+		top: 0;
+		right: 0;
+}
 
 		#nav > ul {
 			margin: 0;
@@ -787,8 +826,8 @@ position: fixed;
 		#banner h2 {
 			display: inline-block;
 			padding: 0.50em 0.30em;
-			background: rgba(85, 85, 85, 0.5);
-			width: 100%;
+			background-color:rgba(238, 238, 238, 0.3);
+			width: 350px;
 			height: 500;
 			font-size: 3em;
 			font-weight: 400;
