@@ -541,7 +541,7 @@ display: none;
 
 		.wrapper.style1 {
 			padding: 0em;
-			background: url(images/ked3.jpg);
+			background: url(images/ked3.jpg) no-repeat;
 			background-size: cover;
 			height: 400px;
 		}
