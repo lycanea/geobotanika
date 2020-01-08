@@ -29,7 +29,7 @@
 	
 		.container.small {
 			/* width: (containers) * 0.75; */
-			width: 700px;
+			width: 900px;
 		}
 
 		.container.big {
@@ -43,7 +43,6 @@
 		}
 
 /* Grid */
-
 
 	.\31 2u { width: 100% }
 	.\31 1u { width: 91.6666666667% }
@@ -72,7 +71,7 @@
 	/* Rows */
 
 		.row > * {
-			float: right;
+			float: left;
 		}
 
 		.row:after {
@@ -95,7 +94,7 @@
 
 			.row + .row > * {
 				/* padding: (gutters) 0 0 (gutters) */
-				padding: 0px 0 0 0px;
+				padding: 40px 0 0 40px;
 			}
 
 			.row {
@@ -155,7 +154,7 @@
 
 			.row.oneandhalf > * {
 				/* padding-left: (gutters * 1.5) */
-				padding-left: 30px;
+				padding-left: 60px;
 			}
 
 			.row + .row.oneandhalf > * {
@@ -165,7 +164,7 @@
 
 			.row.oneandhalf {
 				/* margin-left: -(gutters * 1.5) */
-				margin-left: -30px;
+				margin-left: -60px;
 			}
 
 		/* Double */

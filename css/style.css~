@@ -10,6 +10,10 @@
     display: none;
 }
 /* Basic */
+.zaporny-indent {
+         text-indent: 1em;
+           font-size: 10px;
+;}
 
 	body {
 		background: #222222;
@@ -284,28 +288,38 @@
 			width:720px;
 			height: 200px;
 			float: none;
-			
-			 }}
-				width:720px;
-				height:200px;
-				align= "left"}
+			  margin-left: auto;
+  margin-right: auto;
+  
+			 }
+}			
 						@media screen and (max-width: 1250px) {
         .banner2 {
 
 width: 648px;
 	height:180px;
+				  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  
       }}		
 				@media screen and (max-width: 950px) {
         .banner2 {
 
 width: 576px;
 	height:160px;
+				  margin-left: auto;
+  margin-right: auto;
+    display: block;
       }}
 @media screen and (max-width: 850px) {
         .banner2 {
 
 width: 576px;
 	height:160px;
+				  margin-left: auto;
+  margin-right: auto;
+    display: block;
       }}
       
       @media screen and (max-width: 700px) {
@@ -313,6 +327,9 @@ width: 576px;
 
 width: 540px;
 	height:150px;
+				  margin-left: auto;
+  margin-right: auto;
+    display: block;
       }}
 
 
@@ -321,6 +338,9 @@ width: 540px;
 
 width: 504px;
 	height:140px;
+				  margin-left: auto;
+  margin-right: auto;
+    display: block;
       }}
 
 
@@ -330,6 +350,9 @@ width: 504px;
 
 width: 432px;
 	height:120px;
+				  margin-left: auto;
+  margin-right: auto;
+    display: block;
       }} 
       
       
@@ -338,6 +361,9 @@ width: 432px;
 
 width: 360px;
 	height:100px;
+				  margin-left: auto;
+  margin-right: auto;
+    display: block;
       }} 
       
       @media screen and (max-width: 270px) {
@@ -345,6 +371,9 @@ width: 360px;
 
 width: 180px;
 	height:55px;
+				  margin-left: auto;
+  margin-right: auto;
+    display: block;
       }} 
          @media screen and (max-width: 10px) {
         .banner2 {
@@ -377,27 +406,17 @@ display: none;
 		.icon2 {
 		position: fixed;
 		top: 15px;
-		left: 35px;
+		left: 30px;
 	
 	}
-@media screen and (max-width: 1020px) {
+@media screen and (max-width: 1150px) {
   .icon2 {
   display: none;
   }
   }
-		.icon2 > .label {
-			display: none;
-		}
-	@media screen and (max-width: 720px) {
-  .icon2 {
-  display:inline;
-  }
-  }
-		.icon2 > .label {
-			display: none;
-		}
-	
+		
 
+		
 /* Lists */
 
 	ol.default {
@@ -412,7 +431,7 @@ display: none;
 	ul.default {
 		margin: 0;
 		padding: 0;
-		list-style: none;
+
 	}
 
 		ul.default li {
@@ -435,7 +454,7 @@ display: none;
 			}
 
 			ul.icons li span {
-				display: none;
+				display:inherit;
 			}
 
 			ul.icons li a {
@@ -568,10 +587,45 @@ display: none;
 
 		.wrapper.style1 {
 			padding: 0em;
-			background-image: url("https://github.com/lycanea/geobotanika/blob/master/images/ked3.jpg?raw=true");
+			background-image: url("https://botany.natur.cuni.cz/geobotanika/css/ked3.jpg");
+			background-size: cover;
+			height: 350px;
+		}
+		
+		
+		/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 1600px) {
+  .wrapper.style1 {
+			height: 350px;}}
+  /* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 1450px) {
+  .wrapper.style1 {
+
+    height: 200px;}}
+    
+
+/* On screens that are less than 700px wide, make the sidebar into a topbar */
+@media screen and (max-width: 950px) {
+  .wrapper.style1 {
+height: 150px;
+  }
+
+}
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 800px) {
+   .wrapper.style1 {
+display: none;
+  }
+}
+		
+		.wrapper.style_clonal {
+			padding: 0em;
+			background-image: url("https://botany.natur.cuni.cz/geobotanika/images/clonal_s.jpg");
 			background-size: cover;
 			height: 400px;
 		}
+
 
 		.wrapper.style2 {
 			background: #f2f2f2;
@@ -632,7 +686,7 @@ display: none;
 		}
 			.wrapper.style7 .container {
 				padding-left: 10em;
-				padding-right: 10em;
+				padding-right: 10em;tra
 				width: 1000px;}
 				
 				
@@ -666,7 +720,7 @@ display: none;
 
 			.wrapper.style5 .image {
 				display: block;
-				width: 70%;
+				width: 60%;
 				margin: 0em auto 2em auto;
 			}
 
@@ -676,8 +730,7 @@ display: none;
 					border-color: grey;;
 				}
 		
-		
-		
+
 
 
 /* Header */
@@ -743,6 +796,7 @@ position: fixed;
 		font-weight: 400;
 		right: 30%;
 		display: none;
+
 	}
 
 		#logo h1 {
@@ -846,6 +900,7 @@ position: fixed;
 		text-align: center;
 		text-transform: none;
 		color: white;
+
 	}
 
 		#banner .container {
@@ -915,11 +970,11 @@ position: fixed;
 		}
 
 		#footer .major h2 {
-			color: inherit;
+			color: white;
 		}
 
 		#footer .major .byline {
-			color: inherit;
+			color: white;
 			opacity: .4;
 		}
 
@@ -935,13 +990,14 @@ position: fixed;
 		text-transform: none;
 		text-align: center;
 		padding: 3em 0em 3em 0em;
-		color: inherit;
-		opacity: .40;
+		color: white;
+		opacity: 1;
+		font-family: Ubuntu;
 	}
 
 		#copyright a {
 			text-decoration: none;
-			color: inherit;
+			color: white;
 		}
 
 /* Extra */
@@ -1058,7 +1114,7 @@ display: none;
 
 /* Next & previous buttons */
 .prev, .next {
-  cursor: pointer;
+  cursor: crosshair;
   position: absolute;
   top: 50%;
   width: auto;
@@ -1086,4 +1142,106 @@ display: none;
 
 
 
+
+.btn{
+position: absolute;
+   box-sizing: border-box;
+background: white;
+color: rgba(32, 32, 32, 0.75);
+   
+padding: 3px;
+    font-size: 15px;
+
+    text-align: center;
+text-decoration:none;
+
+    font-weight: bold;
+
+    transition: .2s;
+
+}
+ 
+
+.btn:hover{
+background: black;
+  color: white;
+}
+
+.btnback{
+position: fixed;
+  display: block;
+
+
+background: rgba(32, 32, 32, 0.75);
+bottom: 20px;
+right: 20px;
+font-size: 50px;
+color: white;
+height: 35px;
+padding-top: 15px;
+font-family: Ubuntu;
+   align-content: center;
+
+
+text-decoration:none;
+
+    font-weight: bold;
+
+
+
+}
+ 
+
+
+
+.circle_fl{
+ position:absolute;
+
+    right: 80px;
+    top: 15px;  
+    display: inline-block;
+
+    box-sizing: border-box;
+background: white;
+color: rgba(32, 32, 32, 0.75);
+    width: 34px;
+    height: 34px;
+    line-height: 30px;
+padding: 3px;
+    font-size: 15px;
+    border-radius: 50%;
+    text-align: center;
+text-decoration:none;
+
+    font-weight: bold;
+
+    transition: .2s;
+}
+.circle_fl .fa{
+    line-height: 30px;
+    background: rgba(32, 32, 32, 0.75);
+    color: white;
+}
+.circle_fl:hover{
+    box-shadow: none;
+    background: rgba(32, 32, 32, 0.75);
+        color: white;
+}
+
+
+
+.enverze {
+  color: white;
+  text-decoration: none;
+}
+
+
+
+/* On screens that are less than 400px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 1
+800px) {
+  .enverze {
+display: none;
+  }
+}
 
